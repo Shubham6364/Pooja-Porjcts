@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block body %}
+<link rel="stylesheet" href="{% static 'css/plans.css' %}" />
+
+
+
+
+<h1>WELCOME TO AgentNo WEBSITE</h1>
+<h3>Smart People Smart Choice</h3>
+<h2>Choose Your Best Plan & Save Thousands on Brokrage Amount</h2>
+<h4> Owners Can Post 2 Ads Free Every Month, After That Choose Below Plans</h4>
+
+<section>
+    <div class="columns">
+        <ul class="price">
+            <li class="header1" style="color:white;background:green">OWNER</li>
+            <li class="header">BASIC PLAN</li>
+            <li class="grey" >Rs 199/- </li>
+            <li class="number" >POST EACH ANY TYPE OF PROPERTY ADVERTISE</li>
+            <li class="gst"> (validity 1 month) +18% GST</li>
+            <li class="mb-3 text-muted">
+                <del style="color:red;font-weight:bold;font-size:25px">MRP 5000 Rs/-</del>
+            </li>
+        </ul>
+        <button class="buy_btn"><a class="btn_link" href="{% url 'payment' %}">Buy Now</a></button>
+    </div>
+    <div class="columns1">
+        <ul class="price">
+            <li class="header1" style="color:white;background:royalblue">CUSTOMER</li>
+            <li class="header">BASIC PLAN</li>
+            <li class="grey" >Rs 499/- </li>
+            <li class="number" >VIEW 10 OWNER CONTACT NUMBER & ADDRESS</li>
+            <li class="gst"> (validity 1 month) +18% GST</li>
+            <li class="mb-3 text-muted">
+                <del style="color:red;font-weight:bold;font-size:25px">MRP 5000 Rs/-</del>
+            </li>
+        </ul>
+        <button class="buy_btn"> <a class="btn_link" href="{% url 'payment' %}">Buy Now</a></button>
+    </div>
+    <div class="columns2">
+        <ul class="price">
+            <li class="header1" style="background:royalblue" >CUSTOMER</li>
+            <li class="header" >SMART PLAN</li>
+            <li class="grey" >Rs 899/- </li>
+            <li class="number" >VIEW 20 OWNER CONTACT NUMBER & ADDRESS</li>
+            <li class="gst" > (validity 2 month) +18% GST</li>
+            <li class="mb-3 text-muted">
+                <del style="color:red;font-weight:bold;font-size:25px">MRP 9000 Rs/-</del>
+            </li>
+        </ul>
+        <button class="buy_btn"><a class="btn_link" href="{% url 'payment' %}">Buy Now</a></button>
+    </div>
+    <div class="columns3">
+        <ul class="price">
+            <li class="header1" style="color:white;background:crimson">AUCTION (नीलामी)</li>
+            <li class="header">BASIC PLAN</li>
+            <li class="grey" >Rs 999/- </li>
+            <li class="number" >VIEW 10 BANK AUCTION PROPERTIES CONTACT NUMBER & ADDRESS</li>
+            <li class="gst"> (validity 1 month) +18% GST</li>
+            <li class="mb-3 text-muted">
+                <del style="color:red;font-weight:bold;font-size:25px">MRP 8000 Rs/-</del>
+            </li>
+        </ul>
+        <button class="buy_btn"> <a class="btn_link" href="{% url 'payment' %}">Buy Now</a></button>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,124 @@
+{% extends "office_layout.html" %}
+{% load static %}
+{% block body %}
+<script src="https://kit.fontawesome.com/a44d3682ff.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="{% static 'css/rent_edit.css' %}" />
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+
+<div class="container">
+    <form class="main_display" action="/rent_edit/{{ownrent.rent_id}}" method="POST">
+        {% csrf_token %}
+        <div class="box_img">
+            <img src="{{ownrent.rent_img.url}}" height="525" width="648"/>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="slide_dot" style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+        </div>
+        <div class="box_1">
+            <div class="for">  {{ownrent.prop_type}} For Rent at {{ownrent.location}}</div>
+            <button class="aprov" type="submit">Approve</button>
+            <button class="block">Block</button>
+            <a class="msg" >MSG</a>
+            <div class="near"> <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-location-crosshairs"></i> Near   :</b> <input class="edit_land" type="text" name="landmark" value="{{ownrent.landmark }}"  /></div>
+            <div class="loc"><b> <i class="fa-solid fa-location-dot"></i> Location      :</b>&nbsp;{{ownrent.location}} </div>
+            <div class="area"><b><i class="fa-solid fa-rug"></i> Area                   :</b>&nbsp;{{ownrent.area}}&nbsp;{{ownrent.car_built}} </div>
+            <div class="rent"><b> <i class="fa-solid fa-indian-rupee-sign"></i> Rent    :</b>&nbsp;{{ownrent.rent}}    </div>
+            <div class="dp"><b> <i class="fa-solid fa-indian-rupee-sign"></i> Deposit   :</b>&nbsp;{{ownrent.deposit}}   </div>
+        </div>
+
+        <div class="box_details">
+            <div class="tflr"><b><i class="fa-solid fa-building"></i> Total Floor               :</b>&nbsp; {{ownrent.total_floor}}   </div>
+            <div class="flr"><b><i class="fa-solid fa-building"></i> Floor No                   :</b>&nbsp;{{ownrent.floor}}  </div>
+            <div class="age"><b><i class="fa-solid fa-cake-candles"></i> Property Age           :</b>&nbsp;{{ownrent.prop_age}}   </div>
+            <div class="fur"><b><i class="fa-solid fa-couch"></i> Furnishing                    :</b>&nbsp; {{ownrent.furnish}}  </div>
+            <div class="from"><b><i class="fa-solid fa-calendar-days"></i> Available From       :</b>&nbsp; {{ownrent.avail}}   </div>
+            <div class="stat"><b><i class="fa-solid fa-suitcase-rolling"></i> Property Status   :</b>&nbsp; {{ownrent.prop_status}}  </div>
+
+            <div class="ameni"><b> &nbsp; <i class="fa-solid fa-gift"></i> Amenities : </b>
+
+            </div>
+        </div>
+
+        <div class="box_description">
+            <div class="comment"> <b>Property Description      : </b> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <textarea class="edit_comment" name="comment">{{ownrent.comment}}</textarea>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("box_img");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Office Login</title>
+    <link rel="stylesheet" href="{% static 'css/office_login.css' %}" />
+</head>
+<body>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<div class="container">
+    <form class="form" action="office_login" method="POST">
+        {% csrf_token %}
+        <h1>Login</h1>
+        <hr>
+        <div class="filling">
+            <label class="text" for="username"><b>Employee Name</b></label>
+            <input type="text" id="username" placeholder="Enter Username" name="username" required>
+            <br>
+            <br>
+            <label class="text" for="password"><b>Enter Your Pin</b></label>
+            <input type="password" minlength="6" maxlength="6" placeholder="Enter 6 Digit Pin" name="password" id="password" required><span toggle ="#password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+            <button class="btn" type="submit">Login</button>
+
+        </div>
+    </form>
+</div>
+
+
+
+<script src="{% static 'js/office_login.js' %}"></script>
+
+
+
+
+
+</body>
+</html>

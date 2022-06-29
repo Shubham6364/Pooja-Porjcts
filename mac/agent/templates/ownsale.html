@@ -1,0 +1,455 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block body %}
+<link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<link href="https://transloadit.edgly.net/releases/uppy/v1.6.0/uppy.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="{% static 'css/ownsale.css' %}" />
+
+<style>
+.container{
+    display:block;
+    width:60%;
+    height:1550px;
+    overflow: hidden;
+    margin-top:20px;
+    margin-left:20%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.title{
+     margin-top:20px;
+     font-size:20px;
+     color:darkslategray;
+     font-weight:bold;
+     width:100%;
+     text-align:center;
+}
+#ownsale{
+    width:98%;
+    height:91%;
+    margin-top:40px;
+    margin-left:1%;
+    outline:none;
+    padding:8px;
+    border:1px solid #fff;
+}
+
+.container form .user-details{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+form .user-details .input-box{
+    margin:10px 5px 12px 5px;
+    margin-bottom:15px;
+    width:calc(100% /2 - 50px);
+}
+form .user-details .input-box1{
+    margin:10px 5px 12px 5px;
+    margin-bottom:15px;
+    width:calc(100% /3 - 18px);
+}
+.input {
+    padding:10px;
+    width:100%;
+    outline:none;
+    border-radius:3px;
+    font-size:14px;
+    border:1px solid gray;
+    border-bottom-width:2px;
+}
+.area {
+    padding:8px;
+    width:135px;
+    outline:none;
+    border-radius:3px;
+    font-size:14px;
+    border:1px solid gray;
+    border-bottom-width:2px;
+}
+.carpet {
+    padding:9px;
+    width:180px;
+    outline:none;
+    border-radius:3px;
+    font-size:14px;
+    border:1px solid gray;
+    border-bottom-width:2px;
+}
+.age {
+    padding:10px;
+    width:100%;
+    outline:none;
+    border-radius:3px;
+    font-size:14px;
+    border:1px solid gray;
+    border-bottom-width:2px;
+}
+.status {
+    padding:10px;
+    width:100%;
+    outline:none;
+    border-radius:3px;
+    font-size:14px;
+    border:1px solid gray;
+    border-bottom-width:2px;
+}
+.landmark {
+    padding:10px;
+    width:100%;
+    outline:none;
+    border-radius:3px;
+    font-size:14px;
+    border:1px solid gray;
+    border-bottom-width:2px;
+    text-transform: capitalize;
+}
+.search_bar{
+    padding:10px;
+    width:100%;
+    outline:none;
+    border-radius:3px;
+    font-size:14px;
+    border:1px solid gray;
+    border-bottom-width:2px;
+    text-transform: capitalize;
+}
+.sprice{
+    padding:10px;
+    width:100%;
+    outline:none;
+    border-radius:3px;
+    font-size:14px;
+    border:1px solid gray;
+    border-bottom-width:2px;
+}
+.details5{
+     color:crimson;
+     font-weight:bold;
+}
+.from{
+    padding:10px;
+    width:100%;
+    outline:none;
+    border-radius:3px;
+    font-size:14px;
+    border:1px solid gray;
+    border-bottom-width:2px;
+}
+.park{
+    padding:10px;
+    width:100%;
+    outline:none;
+    border-radius:3px;
+    font-size:14px;
+    border:1px solid gray;
+    border-bottom-width:2px;
+}
+.furnish{
+    padding:10px;
+    width:100%;
+    outline:none;
+    border-radius:3px;
+    font-size:14px;
+    border:1px solid gray;
+    border-bottom-width:2px;
+}
+.user-details .details{
+    display:block;
+    font-weight:bold;
+    color:darkslategray;
+    margin-bottom:5px;
+}
+.user-details .input-box1 .details1{
+    display:block;
+    font-weight:bold;
+    color:darkslategray;
+    margin-bottom:5px;
+}
+.user-details .input-box1 input{
+    height:40px;
+    width:100%;
+    outline:none;
+    border-radius:3px;
+    padding-left:15px;
+    font-size:14px;
+    border:1px solid gray;
+    border-bottom-width:2px;
+    transition:all 0.3s ease;
+}
+.user-details  .input:focus,
+.user-details  .input:valid{
+    border-color:gray;
+}
+textarea{
+    width:360px;
+    height:180px;
+    padding:15px 20px;
+    resize:none;
+    display:block;
+    border:1px dotted silver;
+    margin-left:2px;
+    overflow-y: auto;
+}
+textarea:focus{
+    border:1px solid gray;
+    outline:0;
+    border-bottom-width:2px;
+}
+#pic{
+    border:1px dotted silver;
+    width:370px;
+    height:180px;
+    margin-top:25px;
+    margin-left:0px;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+.img{
+   padding:0px;
+   height:42px;
+   margin-left:50%;
+}
+label.file_btn input[type="file"] {
+    position:absolute;
+    top: -1000px;
+}
+.fa-camera{
+    color:black;
+    font-size:22px;
+    margin-top:50px;
+}
+.file_btn {
+    border: 1px solid #AAA;
+    border-radius: 2px;
+    padding:8px;
+    margin: 2px;
+    width:150px;
+    height:150px;
+    background:none;
+    display: inline-block;
+    text-align:center;
+    font-weight:bold;
+}
+.cancel{
+    margin-top:200px;
+    width:200px;
+    padding:8px;
+    margin-left:20%;
+    background:red;
+    color:white;
+    font-size:18px;
+    border:1px solid red;
+}
+.cancel:hover{
+    background:orangered;
+}
+.submit{
+    margin-top:200px;
+    width:200px;
+    margin-right:20%;
+    background:green;
+    color:white;
+    font-size:18px;
+    border:1px solid green;
+}
+.submit:hover{
+    background:limegreen;
+}
+select option[disabled]:first-child {
+	display: none;
+}
+.gift{
+    height:25px;
+    width:180px;
+    float:left;
+    font-size:12px;
+}
+.ameni{
+    padding:10px;
+    width:100%;
+    outline:none;
+    border-radius:3px;
+    font-size:14px;
+    border:1px solid gray;
+    border-bottom-width:2px;
+}
+
+</style>
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<div class="container">
+    <div class="title">Fill Your Selling Property Details</div>
+    <form id="ownsale" action="ownsale" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="radio" checked id="sale" name="sale" value="sale"> <label for="sale" style="color:crimson;font-size:18px"> Sale </label><br>
+        <div class="user-details">
+            <div class="input-box">
+                <span class="details">Property Type</span>
+                <select  class="input" name="prop_type" id="prop_type" required>
+                    <option value="" selected disabled>--Select Property Type--</option>
+                    <option>1RK</option>
+                    <option>1BHK</option>
+                    <option>2BHK</option>
+                    <option>3BHK+</option>
+                    <option>OFFICE</option>
+                    <option>SHOP-GALA</option>
+                    <option>CHAWL</option>
+                    <option>LAND</option>
+                    <option>BUNGLOW-ROWHOUSE</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <span class="details">Area</span>
+                <select class="carpet" name="car_built" required>
+                    <option value="" selected disabled>--Select Area Type--</option>
+                    <option>Carpet Area</option>
+                    <option>Builtup Area</option>
+                </select>
+                <input class="area" name="area" type="number" required>
+            </div>
+            <div class="input-box1">
+                <span class="details1">Floor</span>
+                <input type="number" name="floor" placeholder="Which Floor" required>
+            </div>
+            <div class="input-box1">
+                <span class="details1">Total Floors</span>
+                <input type="number" name="total_floor" placeholder="Total Floors" required>
+            </div>
+            <div class="input-box1">
+                <span class="details1">Property Age</span>
+                <select class="age" name="prop_age" required>
+                    <option value="" selected disabled>--Select Property Age--</option>
+                    <option>0-10 year old</option>
+                    <option>10-30 year old</option>
+                    <option>30+ year old</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <span class="details">Property Status</span>
+                <select class="status" name="prop_status" required>
+                    <option value="" selected disabled>--Select Property Status--</option>
+                    <option>Ready To Move</option>
+                    <option>Under Construction</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <span class="details">Landmark</span>
+                <input class="landmark" name="landmark" minlength="10" maxlength="50" type="text" placeholder="Street/Landmark" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Location</span>
+                <input class="ui-widget search_bar" id="tags" name="location" type="text" placeholder="Type Your Location" required>
+            </div>
+            <div class="input-box">
+                <span class="details5">Selling Price</span>
+                <input id="Text1" name="selling_price" class="sprice" type="text" onkeypress="return onlyNumbers(this.value);" onkeyup="NumToWord(this.value,'divDisplayWords');" maxlength="12" style="background-color: #efefef; border: 2px solid #CCCCC; font-size: large" placeholder=" Selling Price" required>
+                <div id="divDisplayWords" style="font-size:8; color: crimson;border:none;height:20px;"></div>
+            </div>
+            <div class="input-box">
+                <span class="details">Available From</span>
+                <input name="avail" type="date" class="from"  required>
+            </div>
+            <div class="input-box">
+                <span class="details">Furnishing</span>
+                <select class="furnish" name="furnish" required>
+                    <option value="" selected disabled>--Select Furnishing--</option>
+                    <option>Furnished</option>
+                    <option>Semi Furnished</option>
+                    <option>Unfurnished</option>
+                </select>
+            </div>
+            <span style="color:darkslategray"><b>Available Amenities :</b></span><br>
+            <div class="ameni">
+                <div class="gift"> <input name="lift" value="Lift" type="checkbox"  />                  <label><i class="fa-solid fa-elevator"></i>&nbsp; Lift </label></div>
+                <div class="gift"> <input name="gym" value="Gym" type="checkbox" />                    <label><i class="fa-solid fa-dumbbell"></i>&nbsp; Gym </label></div>
+                <div class="gift"> <input name="swimming_pool" value="Swimming Pool" type="checkbox" />          <label><i class="fa-solid fa-person-swimming"></i>&nbsp; Swimming Pool </label></div>
+                <div class="gift"> <input name="pets_allowed" value="Pets Allowed" type="checkbox" />           <label><i class="fa-solid fa-dog"></i>&nbsp; Pets Allowed</label></div>
+                <div class="gift"> <input name="wifi_internet" value="WiFi Internet" type="checkbox" />          <label><i class="fa-solid fa-wifi"></i>&nbsp; WiFi Internet </label></div>
+                <div class="gift"> <input name="camera" value="Camera-CCTV" type="checkbox" />            <label><i class="fa-solid fa-camera-cctv"></i>&nbsp; Camera-CCTV </label></div>
+                <div class="gift"> <input name="club_house" value="Club-House" type="checkbox" />             <label><i class="fa-solid fa-club"></i>&nbsp; Club-House </label></div>
+                <div class="gift"> <input name="fire_safety" value="Fire Safety" type="checkbox" />            <label><i class="fa-solid fa-fire-extinguisher"></i>&nbsp; Fire Safety </label></div>
+                <div class="gift"> <input name="two_wheeler" value="2 Wheeler" type="checkbox" />              <label><i class="fa-solid fa-motorcycle"></i>&nbsp; 2 Wheeler</label></div>
+                <div class="gift"> <input name="four_wheeler" value="4 Wheeler" type="checkbox" />              <label><i class="fa-solid fa-car"></i>&nbsp; 4 Wheeler</label></div>
+                <div class="gift"> <input name="gas_pipe" value="Gas Pipe" type="checkbox" />               <label><i class="fa-solid fa-pipe-valve"></i>&nbsp; Gas Pipe </label></div>
+                <div class="gift"> <input name="phone_intercom" value="phone-intercom" type="checkbox" />         <label><i class="fa-solid fa-phone-intercom"></i>&nbsp; phone-intercom </label></div>
+                <div class="gift"> <input name="power_backup" value="Power Backup" type="checkbox" />           <label><i class="fa-solid fa-plug-circle-bolt"></i>&nbsp; Power Backup </label></div>
+                <div class="gift"> <input name="servant_room" value="Servant Room" type="checkbox" />           <label><i class="fa-solid fa-house"></i>&nbsp; Servant Room </label></div>
+                <div class="gift"> <input name="security_guard" value="Security Guard" type="checkbox" />         <label><i class="fa-solid fa-person-military-rifle"></i>&nbsp; Security Guard </label></div>
+                <div class="gift"> <input name="house_keeping" value="House Keeping" type="checkbox" />          <label><i class="fa-solid fa-broom"></i>&nbsp; House Keeping </label></div>
+                <div class="gift"> <input name="air_conditioning" value="Air conditioning" type="checkbox" />       <label><i class="fa-regular fa-air-conditioner"></i>&nbsp; Air conditioning </label> </div>
+                <div class="gift" style="width:200px;"> <input name="children_ground" value="Children PlayGround" type="checkbox" />   <label><i class="fa-solid fa-child-reaching"></i>&nbsp; Children PlayGround </label></div>
+            </div>
+            <div>
+                <span class="details" style="margin-left:2px;">Description</span>
+                <textarea name="comment" minlength="10" maxlength="5000" placeholder="--Type Your Property Details--" required></textarea>
+            </div>
+            <div class="preview">
+                <label class="file_btn gallery"  >
+                    <input type="file" name="imagesale" id="imagesale" multiple style="display:block" />
+                </label>
+                 <label class="file_btn">
+                    <input type="file" name="imagesale1" id="imagesale1" multiple style="display:block" />
+                </label>
+                 <label class="file_btn">
+                    <input type="file" name="imagesale2" id="imagesale2" multiple style="display:block" />
+                </label>
+            </div>
+
+            <button type="reset" class="cancel">Cancel</button>
+            <button type="submit" class="submit" >Submit</button>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+<div class="foot" style="text-align:center;padding:10px;">
+    <h1>footer</h1>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="{% static 'js/ownsale.js' %}"></script>
+<script>
+ $(function() {
+    var imagesPreview = function(input, placeToInsertImagePreview) {
+        if (input.files) {
+            var filesAmount = input.files.length;
+            for (i = 0; i < filesAmount; i++) {
+                var reader = new FileReader();
+                reader.onload = function(event) {
+                    $($.parseHTML('<img>')).attr('src', event.target.result).appendTo(placeToInsertImagePreview);
+                }
+                reader.readAsDataURL(input.files[i]);
+            }
+        }
+    };
+
+    $('#imagesale').on('change', function() {
+        imagesPreview(this, 'div.gallery');
+    });
+});
+</script>
+
+
+
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends "office_layout.html" %}
+{% load static %}
+{% block body %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="{% static 'css/office_rentdb.css' %}" />
+
+<style>
+.title{
+    border:1px solid white;
+    width:50%;
+    margin-left:25%;
+    height:30px;
+    text-align:center;
+    padding-top:5px;
+    color:crimson;
+    font-weight:bold;
+}
+.table{
+    border:1px solid silver;
+    width:99%;
+    margin-left:1%;
+    height:380px;
+    overflow-y:auto;
+    margin-top:1px;
+}
+</style>
+
+<div class="title">
+    <h4>USER RENT DATABASE VIEW & APPROVE</h4>
+</div>
+
+<div class="tab_head">
+  <h6 class="id">ID</h6>
+  <h6 class="user">USER_ID </h6>
+  <h6 class="name">CUSTOMER NAME</h6>
+  <h6 class="post">POST DATE</h6>
+  <h6 class="end">END DATE</h6>
+  <h6 class="pac">PACKAGE</h6>
+  <h6 class="city">CITY</h6>
+  <h6 class="loc">LOCATION</h6>
+  <h6 class="type">PROP_TYPE</h6>
+  <h6 class="act">VIEW</h6>
+</div>
+<div class="table">
+    {% for b in ownrent %}
+        <div class="box_1" >
+            <div class="a">01 </div>
+            <div class="b"> {{register.uname}} </div>
+            <div class="c"> </div>
+            <div class="d">22/05/2022 </div>
+            <div class="e"> 22/05/2022</div>
+            <div class="f">NULL </div>
+            <div class="g">Mumbai </div>
+            <div class="h">{{b.location}} </div>
+            <div class="i">{{b.prop_type}} </div>
+            <a href="rent_edit/{{b.rent_id}}" class="j"> VIEW </a>
+        </div>
+    {% endfor %}
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

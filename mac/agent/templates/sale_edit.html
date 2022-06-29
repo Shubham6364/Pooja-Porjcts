@@ -1,0 +1,382 @@
+{% extends "office_layout.html" %}
+{% load static %}
+{% block body %}
+<script src="https://kit.fontawesome.com/a44d3682ff.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="{% static 'css/sale.edit.css' %}" />
+<style>
+.container{
+    width:98%;
+    margin-left:1%;
+    height:550px;
+    margin-top:10px;
+}
+.main_display{
+    border:1px solid lightgray;
+    width:98.5%;
+    height:96.5%;
+    margin:10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.box_img{
+    width:50%;
+    height:100%;
+    border:1px dotted gray;
+    border-radius:2px;
+    opacity: 85%;
+    float:left;
+}
+.box_1{
+    border:1px solid lightgray;
+    width:49%;
+    height:180px;
+    margin-top:5px;
+    margin-left:5px;
+    float:left;
+}
+.for{
+    text-align:center;
+    color:orangered;
+    font-weight:bold;
+    font-size:18px;
+    width:65%;
+    margin:5px;
+    padding:10px;
+    float:left;
+    text-align:left;
+    border-bottom:1px solid silver;
+}
+.aprov{
+    width:13%;
+    float:left;
+    margin-left:1px;
+    margin-top:6px;
+    padding:11px;
+    font-size:14px;
+    text-align:center;
+    font-weight:bold;
+    background:green;
+    border-top:1px solid gray;
+    border-left:1px solid gray;
+    color:white;
+}
+.aprov:hover{
+    background:lime;
+}
+.block{
+    width:10%;
+    float:left;
+    margin-left:2px;
+    margin-top:6px;
+    padding:11px;
+    font-size:14px;
+    text-align:center;
+    font-weight:bold;
+    background:orangered;
+    border-top:1px solid gray;
+    border-left:1px solid gray;
+    color:white;
+}
+.block:hover{
+    background:silver;
+}
+.msg{
+    width:56px;
+    float:left;
+    margin-left:2px;
+    margin-top:6px;
+    padding:11px;
+    font-size:14px;
+    text-align:center;
+    font-weight:bold;
+    background:silver;
+    border-bottom:2px solid gray;
+    border-right:2px solid gray;
+    color:darkslategray;
+}
+.msg:hover{
+    background:skyblue;
+}
+.near{
+    text-transform: capitalize;
+    width:98.5%;
+    margin:5px;
+    padding:10px;
+    color:darkslategray;
+    text-transform: capitalize;
+}
+.loc{
+     width:98.5%;
+     margin:5px;
+     padding:8px;
+     color:darkslategray;
+     text-transform: capitalize;
+}
+.area{
+     width:48.5%;
+     margin-top:2px;
+     margin-left:5px;
+     float:left;
+     padding:5px;
+     color:darkslategray;
+}
+.amt{
+     border-left:1px solid silver;
+     width:48.2%;
+     margin-top:2px;
+     margin-left:5px;
+     float:left;
+     padding:5px;
+     color:darkslategray;
+}
+.box_details{
+    border:1px solid lightgray;
+    width:49%;
+    height:220px;
+    margin-top:5px;
+    margin-left:5px;
+    float:left;
+}
+.tflr{
+    width:47%;
+    margin-top:5px;
+    margin-left:5px;
+    padding:10px;
+    float:left;
+    color:darkslategray;
+}
+.flr{
+    border-left:1px solid silver;
+    width:49.2%;
+    margin-top:5px;
+    margin-left:10px;
+    padding:10px;
+    float:left;
+    color:darkslategray;
+}
+.age{
+    width:47%;
+    margin-top:5px;
+    margin-left:5px;
+    padding:10px;
+    float:left;
+    color:darkslategray;
+    text-transform: capitalize;
+}
+.fur{
+    border-left:1px solid silver;
+    width:49.2%;
+    margin-top:5px;
+    margin-left:10px;
+    padding:10px;
+    float:left;
+    color:darkslategray;
+    text-transform: capitalize;
+}
+.from{
+    width:47%;
+    margin-top:5px;
+    margin-left:5px;
+    padding:10px;
+    float:left;
+    color:darkslategray;
+}
+.stat{
+    border-left:1px solid silver;
+    width:49.2%;
+    margin-top:5px;
+    margin-left:10px;
+    padding:10px;
+    float:left;
+    color:darkslategray;
+    text-transform: capitalize;
+}
+.ameni{
+    border:1px solid silver;
+    width:98%;
+    height:80px;
+    margin-top:5px;
+    margin-left:5px;
+    float:left;
+    color:darkslategray;
+    text-transform: capitalize;
+}
+.box_description{
+    border:1px solid lightgray;
+    width:49%;
+    height:110px;
+    margin-top:5px;
+    margin-left:5px;
+    float:left;
+}
+.comment{
+    width:98%;
+    margin:5px;
+    height:100px;
+    overflow-y: auto;
+    color:darkslategray;
+    text-transform: capitalize;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color:white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  left:630px;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.slide_dot{
+    width:99%;
+    margin-top:0px;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+.edit_land{
+    width:500px;
+    padding:5px;
+}
+.edit_comment{
+    border:1px solid silver;
+    width:620px;
+    height:60px;
+    resize:none;
+    display:block;
+    font-size:14px;
+}
+</style>
+
+<div class="container">
+    <form class="main_display" action="/sale_edit/{{ownsale.sale_id}}" method="POST">
+        {% csrf_token %}
+        <div class="box_img">
+            <img src="{{ownsale.sale_img.url}}" height="525" width="648" />
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="slide_dot" style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+        </div>
+        <div class="box_1">
+            <div class="for"> {{ownsale.prop_type}}  For Sale at {{ownsale.location}}  </div>
+            <button class="aprov" type="submit">Approve</button>
+            <button class="block">Block</button>
+            <a class="msg" >MSG</a>
+            <div class="near"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-location-crosshairs"></i> Near   :</b> <input class="edit_land" type="text" name="landmark" value="{{ownsale.landmark}}"  />     </div>
+            <div class="loc"><b> <i class="fa-solid fa-location-dot"></i> Location :</b> {{ownsale.location}} </div>
+            <div class="area"><b><i class="fa-solid fa-rug"></i> Area :</b>   {{ownsale.area}} &nbsp; {{ownsale.car_built}} </div>
+            <div class="amt"><b> <i class="fa-solid fa-indian-rupee-sign"></i> Price :</b> {{ownsale.selling_price}}</div>
+        </div>
+
+        <div class="box_details">
+            <div class="tflr"><b><i class="fa-solid fa-building"></i> Total Floor            :</b>&nbsp; {{ownsale.total_floor}}   </div>
+            <div class="flr"><b><i class="fa-solid fa-building"></i> Floor No                :</b> &nbsp; {{ownsale.floor}}   </div>
+            <div class="age"><b><i class="fa-solid fa-cake-candles"></i> Property Age        :</b>&nbsp; {{ownsale.prop_age}}      </div>
+            <div class="fur"><b><i class="fa-solid fa-couch"></i> Furnishing                 :</b> &nbsp; {{ownsale.furnish}} </div>
+            <div class="from"><b><i class="fa-solid fa-calendar-days"></i> Available From    :</b>&nbsp; {{ownsale.avail}}         </div>
+            <div class="stat"><b><i class="fa-solid fa-suitcase-rolling"></i> Property Status:</b>&nbsp;  {{ownsale.prop_status}}  </div>
+
+            <div class="ameni"><b> &nbsp; <i class="fa-solid fa-gift"></i> Amenities : </b>
+
+            </div>
+        </div>
+
+        <div class="box_description">
+            <div class="comment"> <b>Property Description :</b> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <textarea class="edit_comment" name="comment">{{ownsale.comment}}</textarea>
+             </div>
+
+        </div>
+    </form>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("box_img");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

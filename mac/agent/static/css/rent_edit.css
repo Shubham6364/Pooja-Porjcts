@@ -1,0 +1,289 @@
+.container{
+    width:98%;
+    margin-left:1%;
+    height:550px;
+    margin-top:10px;
+}
+.main_display{
+    border:1px solid lightgray;
+    width:98.5%;
+    height:96.5%;
+    margin:10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.box_img{
+    width:50%;
+    height:100%;
+    border:1px dotted gray;
+    border-radius:2px;
+    opacity: 85%;
+    float:left;
+}
+.box_1{
+    border:1px solid lightgray;
+    width:49%;
+    height:180px;
+    margin-top:5px;
+    margin-left:5px;
+    float:left;
+}
+.for{
+    text-align:center;
+    color:orangered;
+    font-weight:bold;
+    font-size:18px;
+    width:65%;
+    margin:5px;
+    padding:10px;
+    float:left;
+    text-align:left;
+    border-bottom:1px solid silver;
+}
+.aprov{
+    width:13%;
+    float:left;
+    margin-left:1px;
+    margin-top:6px;
+    padding:11px;
+    font-size:14px;
+    text-align:center;
+    font-weight:bold;
+    background:green;
+    border-top:1px solid gray;
+    border-left:1px solid gray;
+    color:white;
+}
+.aprov:hover{
+    background:lime;
+}
+.block{
+    width:10%;
+    float:left;
+    margin-left:2px;
+    margin-top:6px;
+    padding:11px;
+    font-size:14px;
+    text-align:center;
+    font-weight:bold;
+    background:orangered;
+    border-top:1px solid gray;
+    border-left:1px solid gray;
+    color:white;
+}
+.block:hover{
+    background:silver;
+}
+.msg{
+    width:56px;
+    float:left;
+    margin-left:2px;
+    margin-top:6px;
+    padding:11px;
+    font-size:14px;
+    text-align:center;
+    font-weight:bold;
+    background:silver;
+    border-bottom:2px solid gray;
+    border-right:2px solid gray;
+    color:darkslategray;
+}
+.msg:hover{
+    background:skyblue;
+}
+.near{
+    text-transform: capitalize;
+    width:98.5%;
+    margin:5px;
+    padding:10px;
+    color:darkslategray;
+    border:1px solid red;
+}
+.loc{
+     width:98.5%;
+     margin:1px;
+     padding:8px;
+     color:darkslategray;
+     text-transform: capitalize;
+}
+.area{
+     width:36%;
+     margin-top:1px;
+     margin-left:5px;
+     float:left;
+     padding:5px;
+     color:darkslategray;
+     float:left;
+}
+.rent{
+     border-left:1px solid silver;
+     width:24%;
+     margin-top:1px;
+     margin-left:5px;
+     float:left;
+     padding:5px;
+     color:darkslategray;
+}
+.dp{
+     border-left:1px solid silver;
+     width:35%;
+     margin-top:1px;
+     margin-left:5px;
+     float:left;
+     padding:5px;
+     color:darkslategray;
+}
+.box_details{
+    border:1px solid lightgray;
+    width:49%;
+    height:220px;
+    margin-top:5px;
+    margin-left:5px;
+    float:left;
+}
+.tflr{
+    width:47%;
+    margin-top:5px;
+    margin-left:5px;
+    padding:10px;
+    float:left;
+    color:darkslategray;
+}
+.flr{
+    border-left:1px solid silver;
+    width:49%;
+    margin-top:5px;
+    margin-left:10px;
+    padding:10px;
+    float:left;
+    color:darkslategray;
+}
+.age{
+    width:47%;
+    margin-top:5px;
+    margin-left:5px;
+    padding:10px;
+    float:left;
+    color:darkslategray;
+    text-transform: capitalize;
+}
+.fur{
+    border-left:1px solid silver;
+    width:49%;
+    margin-top:5px;
+    margin-left:10px;
+    padding:10px;
+    float:left;
+    color:darkslategray;
+    text-transform: capitalize;
+}
+.from{
+    width:47%;
+    margin-top:5px;
+    margin-left:5px;
+    padding:10px;
+    float:left;
+    color:darkslategray;
+}
+.stat{
+    border-left:1px solid silver;
+    width:49%;
+    margin-top:5px;
+    margin-left:10px;
+    padding:10px;
+    float:left;
+    color:darkslategray;
+    text-transform: capitalize;
+}
+.ameni{
+    border:1px solid silver;
+    width:98%;
+    height:80px;
+    margin-top:5px;
+    margin-left:5px;
+    float:left;
+    color:darkslategray;
+    text-transform: capitalize;
+}
+.box_description{
+    border:1px solid lightgray;
+    width:49%;
+    height:110px;
+    margin-top:5px;
+    margin-left:5px;
+    float:left;
+}
+.comment{
+    width:98%;
+    margin:5px;
+    height:100px;
+    overflow-y: auto;
+    color:darkslategray;
+    text-transform: capitalize;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color:white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  left:630px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.slide_dot{
+    width:99%;
+    margin-top:0px;
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+.edit_land{
+    width:500px;
+    padding:5px;
+}
+.edit_comment{
+    border:1px solid silver;
+    width:620px;
+    height:60px;
+    resize:none;
+    display:block;
+    font-size:14px;
+}

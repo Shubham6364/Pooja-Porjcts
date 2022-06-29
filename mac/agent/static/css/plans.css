@@ -1,0 +1,128 @@
+h1{
+    font-size:25px;
+    color:crimson;
+    text-align:center;
+    margin-top:30px;
+}
+h2{
+    font-size:20px;
+    text-align:center;
+    color:green;
+    margin-top:5px;
+}
+h3{
+    text-align:center;
+    color:darkcyan;
+    margin-top:5px;
+    font-size:16px;
+}
+h4{
+  color:red;
+  text-align:center;
+  margin-top:10px;
+}
+section{    height:600px;
+    margin-top:10px;
+    font-style:times new roman;
+
+}
+.columns{
+    float:left;
+    width: 310px;
+    margin-left:20px;
+    margin-top:20px;
+    font-style:times new roman;
+    border-radius:5px;
+}
+.columns1 {
+    width: 310px;
+    float:left;
+    margin-left:25px;
+    margin-top:20px;
+    font-style:times new roman;
+}
+.columns2 {
+    float:left;
+    width: 310px;
+    margin-left:20px;
+    margin-top:20px;
+    font-style:times new roman;
+    border-radius:5px;
+}
+.columns3 {
+    width: 310px;
+    float:left;
+    margin-left:25px;
+    margin-top:20px;
+    font-style:times new roman;
+}
+.price {
+  list-style-type: none;
+  line-height:50px;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color:darkslategrey;
+}
+.price:hover {
+  box-shadow: 0 15px 15px 0 rgba(0,0,0,0.2)
+}
+.price .header1 {
+  font-weight:bold;
+  color: white;
+  font-size: 25px;
+  padding:2px;
+}
+.price .header {
+  font-weight:bold;
+  color: white;
+  padding:2px;
+  font-size: 20px;
+  color:darkslategray;
+}
+.number{
+    font-weight:bold;
+    color:crimson;
+    font-size:15px;
+    color:darkslategray;
+}
+.price li {
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+.price .grey {
+  background-color: #eee;
+  font-size: 40px;
+  color:crimson;
+  font-weight:bold;
+  color:darkslategray;
+}
+.gst{
+    font-size:12px;
+    color:gray;
+    font-weight:bold;
+    font-style:arial;
+}
+del {
+text-decoration: line-through;
+}
+.buy_btn{
+    width:310px;
+    height:50px;
+    background: #134E5E;
+    background: -webkit-linear-gradient(to right, #71B280, #134E5E);
+    background: linear-gradient(to right, #71B280, #134E5E);
+    border-bottom: 3px solid gray;
+}
+.btn_link{
+    color:white;
+    padding-left:110px;
+    font-size: 18px;
+    font-weight:bold;
+}
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+}

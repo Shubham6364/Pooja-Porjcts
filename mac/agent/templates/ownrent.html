@@ -1,0 +1,477 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block body %}
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<link rel="stylesheet" href="{% static 'css/ownrent.css' %}" />
+
+<style>
+.container{
+    display:block;
+    width:60%;
+    height:1300px;
+    overflow: hidden;
+    margin-top:20px;
+    margin-left:20%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.title{
+     margin-top:20px;
+     font-size:20px;
+     color:darkslategray;
+     font-weight:bold;
+     width:100%;
+     text-align:center;
+     }
+#ownrent{
+    width:98%;
+    height:91%;
+    margin-top:40px;
+    margin-left:1%;
+    outline:none;
+    padding:8px;
+    border:1px solid #fff;
+}
+.current{
+    width:200px;
+    padding:5px;
+    font-size:18px;
+    color:crimson;
+}
+.user-details1{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+form .user-details1 .input-box1{
+    margin:10px 5px 12px 5px;
+    margin-bottom:15px;
+    width:calc(100% /2 - 50px);
+}
+form .user-details1 .input-box2{
+    margin:10px 5px 12px 5px;
+    margin-bottom:15px;
+    width:calc(100% /3 - 18px);
+}
+
+.input1{
+    padding:10px;
+    width:100%;
+    outline:none;
+    border-radius:3px;
+    font-size:14px;
+    border:1px solid gray;
+    border-bottom-width:2px;
+}
+.area1{
+    padding:8px;
+    width:135px;
+    outline:none;
+    border-radius:3px;
+    font-size:14px;
+    border:1px solid gray;
+    border-bottom-width:2px;
+}
+.carpet1{
+    padding:9px;
+    width:180px;
+    outline:none;
+    border-radius:3px;
+    font-size:14px;
+    border:1px solid gray;
+    border-bottom-width:2px;
+}
+.floor{
+   padding:11px;
+   border:1px solid gray;
+   border-bottom-width:2px;
+   border-radius:3px
+}
+.age1{
+    padding:10px;
+    width:100%;
+    outline:none;
+    border-radius:3px;
+    font-size:14px;
+    border:1px solid gray;
+    border-bottom-width:2px;
+}
+.status1{
+    padding:10px;
+    width:100%;
+    outline:none;
+    border-radius:3px;
+    font-size:14px;
+    border:1px solid gray;
+    border-bottom-width:2px;
+}
+.landmark1{
+    padding:10px;
+    width:100%;
+    outline:none;
+    border-radius:3px;
+    font-size:14px;
+    border:1px solid gray;
+    border-bottom-width:2px;
+    text-transform: capitalize;
+}
+.search_bar{
+    padding:10px;
+    width:100%;
+    outline:none;
+    border-radius:3px;
+    font-size:14px;
+    border:1px solid gray;
+    border-bottom-width:2px;
+    text-transform: capitalize;
+}
+.rent-price{
+    padding:10px;
+    width:150px;
+    outline:none;
+    border-radius:3px;
+    font-size:14px;
+    border:1px solid gray;
+    border-bottom-width:2px;
+    margin-left:0px;
+}
+.dp-price{
+    padding:10px;
+    width:150px;
+    outline:none;
+    border-radius:3px;
+    font-size:14px;
+    border:1px solid gray;
+    border-bottom-width:2px;
+    margin-left:0px;
+}
+.details3{
+    margin-left:2px;
+    color:crimson;
+    font-weight:bold;
+}
+.details4{
+    margin-left:2px;
+    color:crimson;
+    font-weight:bold;
+}
+.from1{
+    padding:8px;
+    width:100%;
+    outline:none;
+    border-radius:3px;
+    font-size:14px;
+    border:1px solid gray;
+    border-bottom-width:2px;
+}
+.park1{
+    padding:10px;
+    width:100%;
+    outline:none;
+    border-radius:3px;
+    font-size:14px;
+    border:1px solid gray;
+    border-bottom-width:2px;
+}
+.furnish1{
+    padding:10px;
+    width:100%;
+    outline:none;
+    border-radius:3px;
+    font-size:14px;
+    border:1px solid gray;
+    border-bottom-width:2px;
+}
+.ameni1{
+    padding:10px;
+    width:100%;
+    outline:none;
+    border-radius:3px;
+    font-size:14px;
+    border:1px solid gray;
+    border-bottom-width:2px;
+    text-transform:uppercase;
+}
+.user-details1 .details2{
+    display:block;
+    font-weight:bold;
+    color:darkslategray;
+    margin-bottom:5px;
+}
+.user-details1 .input-box1 .details2{
+    display:block;
+    font-weight:bold;
+    color:darkslategray;
+    margin-bottom:5px;
+}
+.user-details1 .input-box1 input1{
+    height:40px;
+    width:100%;
+    outline:none;
+    border-radius:3px;
+    padding-left:15px;
+    font-size:14px;
+    border:1px solid gray;
+    border-bottom-width:2px;
+    transition:all 0.3s ease;
+}
+.user-details1  .input1:focus,
+.user-details1  .input1:valid{
+    border-color:gray;
+}
+textarea{
+    width:360px;
+    height:180px;
+    padding:15px 20px;
+    resize:none;
+    display:block;
+    border:1px dotted silver;
+    margin-left:2px;
+    overflow-y: auto;
+}
+textarea:focus{
+    border:1px solid gray;
+    outline:0;
+    border-bottom-width:2px;
+}
+#pic{
+    border:1px dotted silver;
+    width:370px;
+    height:180px;
+    margin-top:25px;
+    margin-left:0px;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+.img{
+   padding:0px;
+   height:42px;
+   margin-left:50%;
+}
+label.file_btn input[type="file"] {
+    position:absolute;
+    top: -1000px;
+}
+.fa-camera{
+    color:black;
+    font-size:22px;
+    margin-top:50px;
+}
+.file_btn {
+    border: 1px solid #AAA;
+    border-radius: 2px;
+    padding:8px;
+    margin: 2px;
+    width:150px;
+    height:150px;
+    background:none;
+    display: inline-block;
+    text-align:center;
+    font-weight:bold;
+}
+.cancel{
+    margin-top:40px;
+    width:200px;
+    padding:8px;
+    margin-left:20%;
+    background:red;
+    color:white;
+    font-size:18px;
+    border:1px solid red;
+}
+.cancel:hover{
+    background:orangered;
+}
+.submit{
+    margin-top:40px;
+    width:200px;
+    margin-right:20%;
+    background:green;
+    color:white;
+    font-size:18px;
+    border:1px solid green;
+}
+.submit:hover{
+    background:limegreen;
+}
+select option[disabled]:first-child {
+	display: none;
+}
+.gift{
+    height:25px;
+    width:180px;
+    float:left;
+    font-size:12px;
+}
+.ameni{
+    padding:10px;
+    width:100%;
+    outline:none;
+    border-radius:3px;
+    font-size:14px;
+    border:1px solid gray;
+    border-bottom-width:2px;
+}
+</style>
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<div class="container">
+    <div class="title">Fill Your Rental Property Details</div>
+    <form  id="ownrent" action="ownrent" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="radio" checked id="rent" name="rent" value="rent"> <label for="rent" style="color:crimson;font-size:18px"> Rent </label><br>
+        <label class="current" id="currentDate"></label>
+        <div class="user-details1">
+            <div class="input-box1">
+                <span class="details2">Property Type</span>
+                <select class="input1" name="prop_type" required>
+                    <option value="" selected disabled>--Select Property Status--</option>
+                    <option>1RK</option>
+                    <option>1BHK</option>
+                    <option>2BHK</option>
+                    <option>3BHK+</option>
+                    <option>OFFICE</option>
+                    <option>SHOP-GALA</option>
+                    <option>CHAWL</option>
+                    <option>LAND</option>
+                    <option>BUNGLOW-ROWHOUSE</option>
+                </select>
+            </div>
+            <div class="input-box1">
+                <span class="details2">Area</span>
+                <select class="carpet1" name="car_built" required>
+                    <option value="" selected disabled>--Select Area Type--</option>
+                    <option>Carpet Area</option>
+                    <option>Builtup Area</option>
+                </select>
+                <input class="area1" type="number" name="area" required>
+            </div>
+            <div class="input-box2">
+                <span class="details2">Floor</span>
+                <input class="floor" type="number" name="floor" placeholder="Which Floor" required>
+            </div>
+            <div class="input-box2">
+                <span class="details2">Total Floors</span>
+                <input class="floor" type="number" name="total_floor" placeholder="Total Floors" required>
+            </div>
+            <div class="input-box2">
+                <span class="details2">Property Age</span>
+                <select class="age1" name="prop_age" required>
+                    <option value="" selected disabled>--Select Property Age--</option>
+                    <option>0-10 year old</option>
+                    <option>10-30 year old</option>
+                    <option>30+ year old</option>
+                </select>
+            </div>
+            <div class="input-box1">
+                <span class="details2">Property Status</span>
+                <select class="status1" name="prop_status" required>
+                    <option value="" selected disabled>--Select Property Status--</option>
+                    <option>Ready To Move</option>
+                    <option>Under Construction</option>
+                </select>
+            </div>
+            <div class="input-box1">
+                <span class="details2">Landmark</span>
+                <input class="landmark1" name="landmark" minlength="10" maxlength="50" type="text" placeholder="Street/Landmark" required>
+            </div>
+            <div class="input-box1">
+                <span class="details2">Location</span>
+                <input class="ui-widget search_bar" id="tags" name="location" type="text" placeholder="Type Your Location" required>
+            </div>
+            <div class="input-box2" style="width:150px;margin-left:70px;">
+                <span class="details3">Asking Rent</span>
+                <input id="Text2" name="ask_rent" class="rent-price" type="text" onkeypress="return onlyNumbers(this.value);" onkeyup="NumToWord(this.value,'divDisplayWords1');" maxlength="9" style="background-color: #efefef; border: 2px solid #CCCCC; font-size: large" placeholder=" Asking Rent" required>
+                <div id="divDisplayWords1" style="font-size: 10; color: crimson; font-family: Arial;display:block;width:165px;height:22px;margin-left:2px;"></div>
+            </div>
+            <div class="input-box2" style="width:150px;margin-left:0px; ">
+                <span class="details4">Asking Deposit</span>
+                <input id="Text3" name="deposit" class="dp-price" type="text" onkeypress="return onlyNumbers(this.value);" onkeyup="NumToWord(this.value,'divDisplayWords3');" maxlength="9" style="background-color: #efefef; border: 2px solid #CCCCC; font-size: large"  placeholder=" Asking Deposit" required>
+                <div id="divDisplayWords3" style="font-size: 10; color: crimson; font-family: Arial;display:block;width:160px;height:22px;margin-left:2px;"></div>
+            </div>
+            <div class="input-box1">
+                <span class="details2">Available From</span>
+                <input type="date" class="from1" name="avail" placeholder="DD/MM/YYYY" required>
+            </div>
+            <div class="input-box1">
+                <span class="details2">Furnishing</span>
+                <select class="furnish1" name="furnish" required>
+                    <option value="" selected disabled>--Select Furnishing--</option>
+                    <option>Furnished</option>
+                    <option>Semi Furnished</option>
+                    <option>Unfurnished</option>
+                </select>
+            </div>
+            <span style="color:darkslategray"><b>Available Amenities :</b></span><br>
+            <div class="ameni">
+                <div class="gift"> <input name="lift" value="Lift" type="checkbox"  />                  <label><i class="fa-solid fa-elevator"></i>&nbsp; Lift </label></div>
+                <div class="gift"> <input name="gym" value="Gym" type="checkbox" />                    <label><i class="fa-solid fa-dumbbell"></i>&nbsp; Gym </label></div>
+                <div class="gift"> <input name="swimming_pool" value="Swimming Pool" type="checkbox" />          <label><i class="fa-solid fa-person-swimming"></i>&nbsp; Swimming Pool </label></div>
+                <div class="gift"> <input name="pets_allowed" value="Pets Allowed" type="checkbox" />           <label><i class="fa-solid fa-dog"></i>&nbsp; Pets Allowed</label></div>
+                <div class="gift"> <input name="wifi_internet" value="WiFi Internet" type="checkbox" />          <label><i class="fa-solid fa-wifi"></i>&nbsp; WiFi Internet </label></div>
+                <div class="gift"> <input name="camera" value="Camera-CCTV" type="checkbox" />            <label><i class="fa-solid fa-camera-cctv"></i>&nbsp; Camera-CCTV </label></div>
+                <div class="gift"> <input name="club_house" value="Club-House" type="checkbox" />             <label><i class="fa-solid fa-club"></i>&nbsp; Club-House </label></div>
+                <div class="gift"> <input name="fire_safety" value="Fire Safety" type="checkbox" />            <label><i class="fa-solid fa-fire-extinguisher"></i>&nbsp; Fire Safety </label></div>
+                <div class="gift"> <input name="two_wheeler" value="2 Wheeler" type="checkbox" />              <label><i class="fa-solid fa-motorcycle"></i>&nbsp; 2 Wheeler</label></div>
+                <div class="gift"> <input name="four_wheeler" value="4 Wheeler" type="checkbox" />              <label><i class="fa-solid fa-car"></i>&nbsp; 4 Wheeler</label></div>
+                <div class="gift"> <input name="gas_pipe" value="Gas Pipe" type="checkbox" />               <label><i class="fa-solid fa-pipe-valve"></i>&nbsp; Gas Pipe </label></div>
+                <div class="gift"> <input name="phone_intercom" value="phone-intercom" type="checkbox" />         <label><i class="fa-solid fa-phone-intercom"></i>&nbsp; phone-intercom </label></div>
+                <div class="gift"> <input name="power_backup" value="Power Backup" type="checkbox" />           <label><i class="fa-solid fa-plug-circle-bolt"></i>&nbsp; Power Backup </label></div>
+                <div class="gift"> <input name="servant_room" value="Servant Room" type="checkbox" />           <label><i class="fa-solid fa-house"></i>&nbsp; Servant Room </label></div>
+                <div class="gift"> <input name="security_guard" value="Security Guard" type="checkbox" />         <label><i class="fa-solid fa-person-military-rifle"></i>&nbsp; Security Guard </label></div>
+                <div class="gift"> <input name="house_keeping" value="House Keeping" type="checkbox" />          <label><i class="fa-solid fa-broom"></i>&nbsp; House Keeping </label></div>
+                <div class="gift"> <input name="air_conditioning" value="Air conditioning" type="checkbox" />       <label><i class="fa-regular fa-air-conditioner"></i>&nbsp; Air conditioning </label> </div>
+                <div class="gift" style="width:200px;"> <input name="children_ground" value="Children PlayGround" type="checkbox" />   <label><i class="fa-solid fa-child-reaching"></i>&nbsp; Children PlayGround </label></div>
+                    </div>
+            <div>
+                <span class="details2" style="margin-left:10px;">Description</span>
+                <textarea class="textarea" minlength="10" maxlength="5000" name="comment" placeholder="--Type Your Extra Property Details--" required></textarea>
+            </div>
+            <div class="pic" >
+                <label id="root"></label>
+            </div>
+            <div class="preview">
+                <label class="file_btn gallery"  >
+                    <input type="file" name="imagerent" id="imagerent" multiple style="display:block" />
+                </label>
+                 <label class="file_btn">
+                    <input type="file" name="imagerent1" id="imagerent1" multiple style="display:block" />
+                </label>
+                 <label class="file_btn">
+                    <input type="file" name="imagerent2" id="imagerent2" multiple style="display:block" />
+                </label>
+            </div>
+            <button type="reset" class="cancel">Cancel</button>
+            <button type="submit" class="submit">Submit</button>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+
+
+<script src="{% static 'js/ownrent.js' %}"></script>
+
+
+
+{% endblock %}

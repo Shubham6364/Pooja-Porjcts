@@ -1,0 +1,2357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ssent</title>
+    <script src="https://kit.fontawesome.com/a44d3682ff.js" crossorigin="anonymous"></script>
+    <style>
+*{
+    padding:0;
+    margin:0;
+    text-decoration:none;
+    list-style:none;
+    box-sizing:border-box;
+    font-family:arial;
+}
+body{
+    font-family:arial;
+}
+/*===================nav start========================================================================================*/
+.main_nav{
+    background: #667db6;
+    background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+    background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    height:55px;
+}
+h1{
+    width:120px;
+    padding:5px;
+    margin-top:4px;
+    margin-left:15px;
+    color:white;
+    float:left;
+    border-right:2px solid silver;
+}
+.name{
+    width:150px;
+    padding:5px;
+    float:left;
+    color:#fff;
+    font-size:16px;
+    font-weight:bold;
+    margin-top:12px;
+    margin-left:5px;
+}
+#active{
+    margin-left:20px;
+}
+.date{
+    width:295px;
+    height:52px;
+    float:right;
+    margin-top:2px;
+}
+.staff{
+    border:1px solid white;
+    width:145px;
+    height:25px;
+    float:left;
+    text-align:left;
+    padding-top:4px;
+    color:white;
+    text-align:center;
+    font-size:14px;
+}
+.tab_head{
+    border:2px solid navy;
+    width:98%;
+    margin-left:1%;
+    height:40px;
+    text-align:center;
+    font-size:20px;
+    background:lightseagreen;
+    color:black;
+    margin-top:10px;
+}
+.aa{
+    border-right:1px dotted white;
+    width:50px;
+    height:38px;
+    float:left;
+}
+.bb{
+    border-right:1px dotted white;
+    width:70px;
+    height:38px;
+    float:left;
+}
+.cc{
+    border-right:1px dotted white;
+    width:180px;
+    height:38px;
+    float:left;
+}
+.dd{
+    border-right:1px dotted white;
+    width:90px;
+    height:38px;
+    float:left;
+}
+.ee{
+    border-right:1px dotted white;
+    width:90px;
+    height:38px;
+    float:left;
+}
+.gg{
+    border-right:1px dotted white;
+    width:60px;
+    height:38px;
+    float:left;
+}
+.hh{
+    border-right:1px dotted white;
+    width:75px;
+    height:38px;
+    float:left;
+}
+.ii{
+    border-right:1px dotted white;
+    width:85px;
+    height:38px;
+    float:left;
+}
+.jj{
+    border-right:1px dotted white;
+    width:120px;
+    height:38px;
+    float:left;
+}
+.kk{
+    border-right:1px dotted white;
+    width:55px;
+    height:38px;
+    float:left;
+}
+.mm{
+    border-right:1px dotted white;
+    width:85px;
+    height:38px;
+    float:left;
+}
+.nn{
+    border-right:1px dotted white;
+    width:95px;
+    height:38px;
+    float:left;
+}
+.oo{
+    border-right:1px dotted white;
+    width:53px;
+    height:38px;
+    float:left;
+}
+.pp{
+    border-right:1px dotted white;
+    width:40px;
+    height:38px;
+    float:left;
+}
+.rr{
+    border:1px solid lightseagreen;
+    width:50px;
+    height:38px;
+    float:left;
+}
+.ss{
+    border-right:1px dotted white;
+    width:130px;
+    height:38px;
+    float:left;
+}
+/*=====================database=======================================================================================*/
+.table{
+    border:1px solid navy;
+    width:99%;
+    margin-left:1%;
+    height:342px;
+    overflow-y:auto;
+    margin-top:1px;
+}
+.box_1{
+    border:1px solid silver;
+    height:25px;
+    text-align:center;
+    font-size:14px;
+    margin-top:1px;
+    background:lavender;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.a{
+    border:1px solid lavender;
+    height:23px;
+    width:50px;
+    float:left;
+}
+.b{
+    border:1px solid lavender;
+    height:23px;
+    width:68px;
+    float:left;
+}
+.c{
+    border:1px solid lavender;
+    height:23px;
+    width:182px;
+    float:left;
+}
+.d{
+    border:1px solid lavender;
+    height:23px;
+    width:90px;
+    float:left;
+}
+.e{
+    border:1px solid lavender;
+    height:23px;
+    width:90px;
+    float:left;
+}
+.f{
+    border:1px solid lavender;
+    height:23px;
+    width:130px;
+    float:left;
+}
+.g{
+    border:1px solid lavender;
+    height:23px;
+    width:60px;
+    float:left;
+}
+.h{
+    border:1px solid lavender;
+    height:22px;
+    width:75px;
+    float:left;
+}
+.i{
+    border:1px solid lavender;
+    height:22px;
+    width:85px;
+    float:left;
+}
+.j{
+    border:1px solid lavender;
+    height:22px;
+    width:120px;
+    float:left;
+}
+.k{
+    border:1px solid lavender;
+    height:23px;
+    width:55px;
+    float:left;
+}
+.l{
+    border:1px solid lavender;
+    height:22px;
+    width:85px;
+    float:left;
+}
+.m{
+    border:1px solid lavender;
+    height:22px;
+    width:95px;
+    float:left;
+}
+.n{
+    border:1px solid lavender;
+    height:22px;
+    width:53px;
+    float:left;
+}
+.o{
+    border:1px solid lavender;
+    height:23px;
+    width:40px;
+    float:left;
+}
+#p{
+    border:1px solid lavender;
+    height:23px;
+    width:48px;
+    float:left;
+}
+.q{
+    border:1px solid lavender;
+    height:23px;
+    width:31px;
+    float:left;
+}
+.v{
+    border:1px solid lavender;
+    height:23px;
+    width:53px;
+    float:left;
+}
+.form_container{
+    border:1px solid silver;
+    width:98%;
+    margin-left:1%;
+    margin-top:2px;
+    height:165px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.form{
+    border:1px solid green;
+    width:98%;
+    margin-left:1%;
+    margin-top:50px;
+    height:145px;
+}
+.modal {
+  /*display: none;*/
+  position: fixed;
+  z-index: 1;
+  border:1px solid silver;
+  width:96%;
+  margin-left:1%;
+  margin-top:5px;
+  height:120px;
+}
+.btn{
+    margin-left:15px;
+    padding:8px;
+    background:dodgerblue;
+    border:1px solid gray;
+    color:white;
+    font-weight:bold;
+    font-size:14px;
+}
+.btn:hover{
+    background:blue;
+}
+.filter{
+    margin-left:12px;
+    padding:8px;
+    width:100px;
+    background:limegreen;
+    border:2px solid gray;
+    color:white;
+    font-weight:bold;
+    font-size:14px;
+}
+.filter:hover{
+    background:red;
+}
+.form2{
+    border:1px solid silver;
+    width:300px;
+    height:25px;
+    float:right;
+    margin-right:100px;
+    margin-top:8px;
+    font-size:14px;
+    padding:3px;
+}
+.form1{
+    border:1px solid white;
+    width:500px;
+    height:35px;
+    float:right;
+    margin-right:10px;
+    margin-top:2px;
+}
+.search{
+    border:1px solid silver;
+    width:494px;
+    padding:6px;
+    margin:2px;
+}
+.cust{
+    border:1px solid white;
+    width:180px;
+    height:50px;
+    float:left;
+    font-size:12px;
+    margin-left:3px;
+    margin-top:8px;
+}
+.cust1{
+    border:1px solid white;
+    width:180px;
+    height:50px;
+    float:left;
+    font-size:12px;
+    margin-left:3px;
+    margin-top:8px;
+}
+.save{
+    float:left;
+    margin-top:26px;
+    margin-left:5px;
+    padding:5px;
+    width:100px;
+    background:mediumseagreen;
+    border:1px solid green;
+    color:white;
+}
+.save:hover{
+    background:lime;
+}
+.close{
+    float:left;
+    margin-top:26px;
+    margin-left:5px;
+    padding:5px;
+    width:100px;
+    background:red;
+    border:1px solid red;
+    color:white;
+}
+.close:hover{
+    background:orange;
+}
+.text{
+    margin-left:5px;
+    font-size:14px;
+    color:midnightblue;
+}
+.type{
+    padding:5px;
+    width:173px;
+    margin:2px;
+}
+.dropbtn {
+  background-color:midnightblue;
+  color: white;
+  padding:3px;
+  font-size:12px;
+  border: none;
+  width:50px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 50px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-size:12px;
+  font-weight:bold;
+}
+.dropdown-content a {
+  color: black;
+  padding: 6px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: silver;}
+</style>
+</head>
+<body>
+<div class="main_nav">
+    <h1>SSENT</h1>
+    <a href="" class="name" id="active">Customer Data </a>
+    <a href="" class="name">Owner Data </a>
+    <a href="" class="name">Delete Customer </a>
+    <a href="" class="name">Delete Owner </a>
+    <a href="" class="name">Logout </a>
+    <div class="date">
+        <div class="staff">Staff Id :</div>
+        <div class="staff">Member_Id :</div>
+        <div class="staff"> Date : </div>
+        <div class="staff"> Time : </div>
+    </div>
+</div>
+<!--------------------------------------nav-end------------------------------------------------------------------------>
+<!--------------------------------------form-start------------------------------------------------------------------------>
+<div class="form_container">
+    <button class="btn" onclick="document.getElementById('id01').style.display='block'">Add New Customer</button>
+    <button class="filter" >Filter Off</button>
+    <div class="form1"><input class="search" type="text" placeholder="Search by Customer Name & Contact......"/></div>
+    <div class="form2">Total No.Of Data Showing :</div>
+    <div id="id01" class="modal">
+        <form id="form" class="">
+            <div class="cust">
+                <label class="text" ><b>Customer Name</b></label>
+                <input type="text" class="type" required>
+            </div>
+            <div class="cust">
+                <label class="text" ><b>Contact</b></label>
+                <input type="text" class="type" required>
+            </div>
+            <div class="cust">
+                <label class="text" ><b>Contact 2 (optional)</b></label>
+                <input type="text" class="type" required>
+            </div>
+            <div class="cust">
+                <label class="text" ><b>Customer Location</b></label>
+                <select class="type" required>
+                    <option selected disabled>--Select Customer Location--</option>
+                    <option>Vasai West</option>
+                </select>
+            </div>
+            <div class="cust">
+                <label class="text" ><b>Ref.</b></label>
+                <input type="text"  class="type" required>
+            </div>
+            <div class="cust">
+                <label class="text" ><b>For Sale/Rent</b></label>
+                <select class="type" required>
+                    <option selected disabled>--Select Sale Or Rent--</option>
+                    <option>Sale</option>
+                    <option>Rent</option>
+                    <option>Heavy.DP</option>
+                    <option>Bank Auction</option>
+                </select>
+            </div>
+            <div class="cust">
+                <label class="text" ><b>Property Typy</b></label>
+                <select class="type" required >
+                    <option selected disabled>--Select Property Type--</option>
+                    <option>1RK</option>
+                    <option>1BHK</option>
+                    <option>2BHK</option>
+                    <option>3BHK+</option>
+                    <option>Office</option>
+                    <option>Shop-Gala</option>
+                    <option>P.G</option>
+                    <option>Bunglow-Rowhouse</option>
+                    <option>Chawl</option>
+                    <option>Land</option>
+                </select>
+            </div>
+            <div class="cust1">
+                <label class="text" ><b>Required Location</b></label>
+                <select class="type" required>
+                    <option selected disabled>--Select Required Location--</option>
+                    <option>Vasai West</option>
+                </select>
+            </div>
+            <div class="cust1">
+                <label class="text" ><b>Budget</b></label>
+                <input type="text" class="type" required>
+            </div>
+            <div class="cust1">
+                <label class="text" ><b>FeedBack</b></label>
+                <select class="type" required>
+                    <option selected disabled>--Select Customer Feedback--</option>
+                    <option>Not.Int</option>
+                    <option>Not.Rech</option>
+                    <option>Ring-Busy</option>
+                    <option>Interested</option>
+                    <option>Swi.Off</option>
+                    <option>Deal-Done</option>
+                    <option>Netwrk prob</option>
+                    <option>Invalid</option>
+                    <option>Beep Sound</option>
+                    <option>Call Me Back</option>
+                </select>
+            </div>
+            <div class="cust1">
+                <label class="text" ><b>Next Call Date</b></label>
+                <input type="date" class="type" placeholder="DD/MM/YYYY"  required>
+            </div>
+            <div class="cust1">
+                <label class="text" ><b>Time</b></label>
+                <select class="type" required>
+                    <option selected disabled>--Select Call Time--</option>
+                    <option>8am</option>
+                    <option>9am</option>
+                    <option>10am</option>
+                    <option>11am</option>
+                    <option>12am</option>
+                    <option>1pm</option>
+                    <option>2pm</option>
+                    <option>3pm</option>
+                    <option>4pm</option>
+                    <option>5pm</option>
+                    <option>6pm</option>
+                    <option>7pm</option>
+                    <option>8pm</option>
+                    <option>9pm</option>
+                </select>
+            </div>
+            <div class="cust1">
+                <label class="text" ><b>Type Note</b></label>
+                <input type="text" class="type"  placeholder="--Type Here--"  required>
+            </div>
+            <button class="save">Save</button>
+            <button onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">Close</button>
+        </form>
+    </div>
+</div>
+<!-----------------tabel head------------------------------------------------------------------------------------------>
+<div class="tab_head">
+    <h6 class="aa">S.N</h6>
+    <h6 class="bb ">First Call </h6>
+    <h6 class=" cc">Customer Name</h6>
+    <h6 class=" dd">Contact</h6>
+    <h6 class=" ee"> Contact 2 (optional)</h6>
+    <h6 class="ss">Customer Location</h6>
+    <h6 class=" gg" >Ref.</h6>
+    <h6 class="hh" style="background:limegreen">Sale / Rent (filter)</h6>
+    <h6 class="ii" style="background:limegreen">Prop.Type (filter)</h6>
+    <h6 class="jj" style="background:limegreen">Reqd.Loc (filter)</h6>
+    <h6 class="kk">Budget</h6>
+    <h6 class="mm" style="background:cornflowerblue">Feedback (Logic)</h6>
+    <h6 class="nn" style="background:cornflowerblue">Next Call Date (Logic)</h6>
+    <h6 class="oo" style="background:cornflowerblue">Time (Logic)</h6>
+    <h6 class="pp">Note</h6>
+    <h6 class="rr">Action</h6>
+</div>
+<!-----------------------------table----------------------------------------------------------------------------------->
+<div class="table">
+    <div class="box_1" >
+        <div class="a">00001</div>
+        <div class="b">22/05/22</div>
+        <div class="c">Sachin Vishwakarma Naidu</div>
+        <div class="d">8888888888</div>
+        <div class="e">8888888888</div>
+        <div class="f">Nallasopara W</div>
+        <div class="g">pamp</div>
+        <div class="h">
+            <select class="h" style="background:lavender" required>
+                <option selected disabled>select</option>
+                <option>Sale</option>
+                <option>Rent</option>
+                <option>Heavy.DP</option>
+                <option>Bank Auction</option>
+            </select>
+        </div>
+        <div class="i">
+            <select class="i" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>1RK</option>
+                <option>1BHK</option>
+                <option>2BHK</option>
+                <option>3BHK+</option>
+                <option>Office</option>
+                <option>Shop-Gala</option>
+                <option>P.G</option>
+                <option>Bunglow-Rowhouse</option>
+                <option>Chawl</option>
+                <option>Land</option>
+            </select>
+        </div>
+        <div class="j">
+            <select class="j" required style="background:lavender">
+                <option>Virar E</option>
+                <option>Virar W</option>
+                <option>Nallasopara E</option>
+                <option>Nallasopara W</option>
+                <option>Vasai E</option>
+                <option>Vasai W</option>
+                <option>Naigao E</option>
+                <option>Naigao W</option>
+            </select>
+        </div>
+        <div class="k">90,000</div>
+        <div class="l">
+            <select class="l" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>Not.Int</option>
+                <option>Not.Rech</option>
+                <option>Ring-Busy</option>
+                <option>Call Back</option>
+                <option>Swi.Off</option>
+                <option>Deal-Done</option>
+                <option>Net.Issue</option>
+                <option>Invalid</option>
+                <option>Beep Sound</option>
+            </select>
+        </div>
+        <div class="m"><input type="date" class="m"   required style="background:lavender"></div>
+        <div class="n">
+            <select class="n" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>8am</option>
+                <option>9am</option>
+                <option>10am</option>
+                <option>11am</option>
+                <option>12am</option>
+                <option>1pm</option>
+                <option>2pm</option>
+                <option>3pm</option>
+                <option>4pm</option>
+                <option>5pm</option>
+                <option>6pm</option>
+                <option>7pm</option>
+                <option>8pm</option>
+                <option>9pm</option>
+            </select>
+        </div>
+        <div class="o">Note</div>
+        <div id="p" class="dropdown">
+            <button class="dropbtn">Action</button>
+            <div class="dropdown-content">
+                <a href="#" style="background:limegreen">Save</a>
+                <a href="#" style="background:orangered">Delete</a>
+                <a href="#" style="background:skyblue">SMS</a>
+                <a href="#" style="background:lightseagreen">WP SMS</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="box_1" style="background:white">
+        <div class="a">00002</div>
+        <div class="b">22/05/22</div>
+        <div class="c">Sachin Vishwakarma Naidu</div>
+        <div class="d">8888888888</div>
+        <div class="e">8888888888</div>
+        <div class="f">Nallasopara W</div>
+        <div class="g">pamp</div>
+        <div class="h">
+            <select class="h" style="background:white" required>
+                <option selected disabled>select</option>
+                <option>Sale</option>
+                <option>Rent</option>
+                <option>Heavy.DP</option>
+                <option>Bank Auction</option>
+            </select>
+        </div>
+        <div class="i">
+            <select class="i" required style="background:white">
+                <option selected disabled>select</option>
+                <option>1RK</option>
+                <option>1BHK</option>
+                <option>2BHK</option>
+                <option>3BHK+</option>
+                <option>Office</option>
+                <option>Shop-Gala</option>
+                <option>P.G</option>
+                <option>Bunglow-Rowhouse</option>
+                <option>Chawl</option>
+                <option>Land</option>
+            </select>
+        </div>
+        <div class="j">
+            <select class="j" required style="background:white">
+                <option>Virar E</option>
+                <option>Virar W</option>
+                <option>Nallasopara E</option>
+                <option>Nallasopara W</option>
+                <option>Vasai E</option>
+                <option>Vasai W</option>
+                <option>Naigao E</option>
+                <option>Naigao W</option>
+            </select>
+        </div>
+        <div class="k">90,000</div>
+        <div class="l">
+            <select class="l" required style="background:white">
+                <option selected disabled>select</option>
+                <option>Not.Int</option>
+                <option>Not.Rech</option>
+                <option>Ring-Busy</option>
+                <option>Call Back</option>
+                <option>Swi.Off</option>
+                <option>Deal-Done</option>
+                <option>Net.Issue</option>
+                <option>Invalid</option>
+                <option>Beep Sound</option>
+            </select>
+        </div>
+        <div class="m"><input type="date" class="m"   required style="background:white"></div>
+        <div class="n">
+            <select class="n" required style="background:white">
+                <option selected disabled>select</option>
+                <option>8am</option>
+                <option>9am</option>
+                <option>10am</option>
+                <option>11am</option>
+                <option>12am</option>
+                <option>1pm</option>
+                <option>2pm</option>
+                <option>3pm</option>
+                <option>4pm</option>
+                <option>5pm</option>
+                <option>6pm</option>
+                <option>7pm</option>
+                <option>8pm</option>
+                <option>9pm</option>
+            </select>
+        </div>
+        <div class="o">Note</div>
+        <div id="p" class="dropdown">
+            <button class="dropbtn" style="background:blue">Action</button>
+            <div class="dropdown-content">
+                <a href="#" style="background:limegreen">Save</a>
+                <a href="#" style="background:orangered">Delete</a>
+                <a href="#" style="background:skyblue">SMS</a>
+                <a href="#" style="background:lightseagreen">WP SMS</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="box_1" >
+        <div class="a">00003</div>
+        <div class="b">22/05/22</div>
+        <div class="c">Sachin Vishwakarma Naidu</div>
+        <div class="d">8888888888</div>
+        <div class="e">8888888888</div>
+        <div class="f">Nallasopara W</div>
+        <div class="g">pamp</div>
+        <div class="h">
+            <select class="h" style="background:lavender" required>
+                <option selected disabled>select</option>
+                <option>Sale</option>
+                <option>Rent</option>
+                <option>Heavy.DP</option>
+                <option>Bank Auction</option>
+            </select>
+        </div>
+        <div class="i">
+            <select class="i" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>1RK</option>
+                <option>1BHK</option>
+                <option>2BHK</option>
+                <option>3BHK+</option>
+                <option>Office</option>
+                <option>Shop-Gala</option>
+                <option>P.G</option>
+                <option>Bunglow-Rowhouse</option>
+                <option>Chawl</option>
+                <option>Land</option>
+            </select>
+        </div>
+        <div class="j">
+            <select class="j" required style="background:lavender">
+                <option>Virar E</option>
+                <option>Virar W</option>
+                <option>Nallasopara E</option>
+                <option>Nallasopara W</option>
+                <option>Vasai E</option>
+                <option>Vasai W</option>
+                <option>Naigao E</option>
+                <option>Naigao W</option>
+            </select>
+        </div>
+        <div class="k">90,000</div>
+        <div class="l">
+            <select class="l" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>Not.Int</option>
+                <option>Not.Rech</option>
+                <option>Ring-Busy</option>
+                <option>Call Back</option>
+                <option>Swi.Off</option>
+                <option>Deal-Done</option>
+                <option>Net.Issue</option>
+                <option>Invalid</option>
+                <option>Beep Sound</option>
+            </select>
+        </div>
+        <div class="m"><input type="date" class="m"   required style="background:lavender"></div>
+        <div class="n">
+            <select class="n" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>8am</option>
+                <option>9am</option>
+                <option>10am</option>
+                <option>11am</option>
+                <option>12am</option>
+                <option>1pm</option>
+                <option>2pm</option>
+                <option>3pm</option>
+                <option>4pm</option>
+                <option>5pm</option>
+                <option>6pm</option>
+                <option>7pm</option>
+                <option>8pm</option>
+                <option>9pm</option>
+            </select>
+        </div>
+        <div class="o">Note</div>
+        <div id="p" class="dropdown">
+            <button class="dropbtn">Action</button>
+            <div class="dropdown-content">
+                <a href="#" style="background:limegreen">Save</a>
+                <a href="#" style="background:orangered">Delete</a>
+                <a href="#" style="background:skyblue">SMS</a>
+                <a href="#" style="background:lightseagreen">WP SMS</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="box_1" style="background:white">
+        <div class="a">00004</div>
+        <div class="b">22/05/22</div>
+        <div class="c">Sachin Vishwakarma Naidu</div>
+        <div class="d">8888888888</div>
+        <div class="e">8888888888</div>
+        <div class="f">Nallasopara W</div>
+        <div class="g">pamp</div>
+        <div class="h">
+            <select class="h" style="background:white" required>
+                <option selected disabled>select</option>
+                <option>Sale</option>
+                <option>Rent</option>
+                <option>Heavy.DP</option>
+                <option>Bank Auction</option>
+            </select>
+        </div>
+        <div class="i">
+            <select class="i" required style="background:white">
+                <option selected disabled>select</option>
+                <option>1RK</option>
+                <option>1BHK</option>
+                <option>2BHK</option>
+                <option>3BHK+</option>
+                <option>Office</option>
+                <option>Shop-Gala</option>
+                <option>P.G</option>
+                <option>Bunglow-Rowhouse</option>
+                <option>Chawl</option>
+                <option>Land</option>
+            </select>
+        </div>
+        <div class="j">
+            <select class="j" required style="background:white">
+                <option>Virar E</option>
+                <option>Virar W</option>
+                <option>Nallasopara E</option>
+                <option>Nallasopara W</option>
+                <option>Vasai E</option>
+                <option>Vasai W</option>
+                <option>Naigao E</option>
+                <option>Naigao W</option>
+            </select>
+        </div>
+        <div class="k">90,000</div>
+        <div class="l">
+            <select class="l" required style="background:white">
+                <option selected disabled>select</option>
+                <option>Not.Int</option>
+                <option>Not.Rech</option>
+                <option>Ring-Busy</option>
+                <option>Call Back</option>
+                <option>Swi.Off</option>
+                <option>Deal-Done</option>
+                <option>Net.Issue</option>
+                <option>Invalid</option>
+                <option>Beep Sound</option>
+            </select>
+        </div>
+        <div class="m"><input type="date" class="m"   required style="background:white"></div>
+        <div class="n">
+            <select class="n" required style="background:white">
+                <option selected disabled>select</option>
+                <option>8am</option>
+                <option>9am</option>
+                <option>10am</option>
+                <option>11am</option>
+                <option>12am</option>
+                <option>1pm</option>
+                <option>2pm</option>
+                <option>3pm</option>
+                <option>4pm</option>
+                <option>5pm</option>
+                <option>6pm</option>
+                <option>7pm</option>
+                <option>8pm</option>
+                <option>9pm</option>
+            </select>
+        </div>
+        <div class="o">Note</div>
+        <div id="p" class="dropdown">
+            <button class="dropbtn" style="background:blue">Action</button>
+            <div class="dropdown-content">
+                <a href="#" style="background:limegreen">Save</a>
+                <a href="#" style="background:orangered">Delete</a>
+                <a href="#" style="background:skyblue">SMS</a>
+                <a href="#" style="background:lightseagreen">WP SMS</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="box_1" >
+        <div class="a">00005</div>
+        <div class="b">22/05/22</div>
+        <div class="c">Sachin Vishwakarma Naidu</div>
+        <div class="d">8888888888</div>
+        <div class="e">8888888888</div>
+        <div class="f">Nallasopara W</div>
+        <div class="g">pamp</div>
+        <div class="h">
+            <select class="h" style="background:lavender" required>
+                <option selected disabled>select</option>
+                <option>Sale</option>
+                <option>Rent</option>
+                <option>Heavy.DP</option>
+                <option>Bank Auction</option>
+            </select>
+        </div>
+        <div class="i">
+            <select class="i" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>1RK</option>
+                <option>1BHK</option>
+                <option>2BHK</option>
+                <option>3BHK+</option>
+                <option>Office</option>
+                <option>Shop-Gala</option>
+                <option>P.G</option>
+                <option>Bunglow-Rowhouse</option>
+                <option>Chawl</option>
+                <option>Land</option>
+            </select>
+        </div>
+        <div class="j">
+            <select class="j" required style="background:lavender">
+                <option>Virar E</option>
+                <option>Virar W</option>
+                <option>Nallasopara E</option>
+                <option>Nallasopara W</option>
+                <option>Vasai E</option>
+                <option>Vasai W</option>
+                <option>Naigao E</option>
+                <option>Naigao W</option>
+            </select>
+        </div>
+        <div class="k">90,000</div>
+        <div class="l">
+            <select class="l" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>Not.Int</option>
+                <option>Not.Rech</option>
+                <option>Ring-Busy</option>
+                <option>Call Back</option>
+                <option>Swi.Off</option>
+                <option>Deal-Done</option>
+                <option>Net.Issue</option>
+                <option>Invalid</option>
+                <option>Beep Sound</option>
+            </select>
+        </div>
+        <div class="m"><input type="date" class="m"   required style="background:lavender"></div>
+        <div class="n">
+            <select class="n" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>8am</option>
+                <option>9am</option>
+                <option>10am</option>
+                <option>11am</option>
+                <option>12am</option>
+                <option>1pm</option>
+                <option>2pm</option>
+                <option>3pm</option>
+                <option>4pm</option>
+                <option>5pm</option>
+                <option>6pm</option>
+                <option>7pm</option>
+                <option>8pm</option>
+                <option>9pm</option>
+            </select>
+        </div>
+        <div class="o">Note</div>
+        <div id="p" class="dropdown">
+            <button class="dropbtn">Action</button>
+            <div class="dropdown-content">
+                <a href="#" style="background:limegreen">Save</a>
+                <a href="#" style="background:orangered">Delete</a>
+                <a href="#" style="background:skyblue">SMS</a>
+                <a href="#" style="background:lightseagreen">WP SMS</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="box_1" style="background:white">
+        <div class="a">00006</div>
+        <div class="b">22/05/22</div>
+        <div class="c">Sachin Vishwakarma Naidu</div>
+        <div class="d">8888888888</div>
+        <div class="e">8888888888</div>
+        <div class="f">Nallasopara W</div>
+        <div class="g">pamp</div>
+        <div class="h">
+            <select class="h" style="background:white" required>
+                <option selected disabled>select</option>
+                <option>Sale</option>
+                <option>Rent</option>
+                <option>Heavy.DP</option>
+                <option>Bank Auction</option>
+            </select>
+        </div>
+        <div class="i">
+            <select class="i" required style="background:white">
+                <option selected disabled>select</option>
+                <option>1RK</option>
+                <option>1BHK</option>
+                <option>2BHK</option>
+                <option>3BHK+</option>
+                <option>Office</option>
+                <option>Shop-Gala</option>
+                <option>P.G</option>
+                <option>Bunglow-Rowhouse</option>
+                <option>Chawl</option>
+                <option>Land</option>
+            </select>
+        </div>
+        <div class="j">
+            <select class="j" required style="background:white">
+                <option>Virar E</option>
+                <option>Virar W</option>
+                <option>Nallasopara E</option>
+                <option>Nallasopara W</option>
+                <option>Vasai E</option>
+                <option>Vasai W</option>
+                <option>Naigao E</option>
+                <option>Naigao W</option>
+            </select>
+        </div>
+        <div class="k">90,000</div>
+        <div class="l">
+            <select class="l" required style="background:white">
+                <option selected disabled>select</option>
+                <option>Not.Int</option>
+                <option>Not.Rech</option>
+                <option>Ring-Busy</option>
+                <option>Call Back</option>
+                <option>Swi.Off</option>
+                <option>Deal-Done</option>
+                <option>Net.Issue</option>
+                <option>Invalid</option>
+                <option>Beep Sound</option>
+            </select>
+        </div>
+        <div class="m"><input type="date" class="m"   required style="background:white"></div>
+        <div class="n">
+            <select class="n" required style="background:white">
+                <option selected disabled>select</option>
+                <option>8am</option>
+                <option>9am</option>
+                <option>10am</option>
+                <option>11am</option>
+                <option>12am</option>
+                <option>1pm</option>
+                <option>2pm</option>
+                <option>3pm</option>
+                <option>4pm</option>
+                <option>5pm</option>
+                <option>6pm</option>
+                <option>7pm</option>
+                <option>8pm</option>
+                <option>9pm</option>
+            </select>
+        </div>
+        <div class="o">Note</div>
+        <div id="p" class="dropdown">
+            <button class="dropbtn" style="background:blue">Action</button>
+            <div class="dropdown-content">
+                <a href="#" style="background:limegreen">Save</a>
+                <a href="#" style="background:orangered">Delete</a>
+                <a href="#" style="background:skyblue">SMS</a>
+                <a href="#" style="background:lightseagreen">WP SMS</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="box_1" >
+        <div class="a">00007</div>
+        <div class="b">22/05/22</div>
+        <div class="c">Sachin Vishwakarma Naidu</div>
+        <div class="d">8888888888</div>
+        <div class="e">8888888888</div>
+        <div class="f">Nallasopara W</div>
+        <div class="g">pamp</div>
+        <div class="h">
+            <select class="h" style="background:lavender" required>
+                <option selected disabled>select</option>
+                <option>Sale</option>
+                <option>Rent</option>
+                <option>Heavy.DP</option>
+                <option>Bank Auction</option>
+            </select>
+        </div>
+        <div class="i">
+            <select class="i" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>1RK</option>
+                <option>1BHK</option>
+                <option>2BHK</option>
+                <option>3BHK+</option>
+                <option>Office</option>
+                <option>Shop-Gala</option>
+                <option>P.G</option>
+                <option>Bunglow-Rowhouse</option>
+                <option>Chawl</option>
+                <option>Land</option>
+            </select>
+        </div>
+        <div class="j">
+            <select class="j" required style="background:lavender">
+                <option>Virar E</option>
+                <option>Virar W</option>
+                <option>Nallasopara E</option>
+                <option>Nallasopara W</option>
+                <option>Vasai E</option>
+                <option>Vasai W</option>
+                <option>Naigao E</option>
+                <option>Naigao W</option>
+            </select>
+        </div>
+        <div class="k">90,000</div>
+        <div class="l">
+            <select class="l" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>Not.Int</option>
+                <option>Not.Rech</option>
+                <option>Ring-Busy</option>
+                <option>Call Back</option>
+                <option>Swi.Off</option>
+                <option>Deal-Done</option>
+                <option>Net.Issue</option>
+                <option>Invalid</option>
+                <option>Beep Sound</option>
+            </select>
+        </div>
+        <div class="m"><input type="date" class="m"   required style="background:lavender"></div>
+        <div class="n">
+            <select class="n" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>8am</option>
+                <option>9am</option>
+                <option>10am</option>
+                <option>11am</option>
+                <option>12am</option>
+                <option>1pm</option>
+                <option>2pm</option>
+                <option>3pm</option>
+                <option>4pm</option>
+                <option>5pm</option>
+                <option>6pm</option>
+                <option>7pm</option>
+                <option>8pm</option>
+                <option>9pm</option>
+            </select>
+        </div>
+        <div class="o">Note</div>
+        <div id="p" class="dropdown">
+            <button class="dropbtn">Action</button>
+            <div class="dropdown-content">
+                <a href="#" style="background:limegreen">Save</a>
+                <a href="#" style="background:orangered">Delete</a>
+                <a href="#" style="background:skyblue">SMS</a>
+                <a href="#" style="background:lightseagreen">WP SMS</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="box_1" style="background:white">
+        <div class="a">00008</div>
+        <div class="b">22/05/22</div>
+        <div class="c">Sachin Vishwakarma Naidu</div>
+        <div class="d">8888888888</div>
+        <div class="e">8888888888</div>
+        <div class="f">Nallasopara W</div>
+        <div class="g">pamp</div>
+        <div class="h">
+            <select class="h" style="background:white" required>
+                <option selected disabled>select</option>
+                <option>Sale</option>
+                <option>Rent</option>
+                <option>Heavy.DP</option>
+                <option>Bank Auction</option>
+            </select>
+        </div>
+        <div class="i">
+            <select class="i" required style="background:white">
+                <option selected disabled>select</option>
+                <option>1RK</option>
+                <option>1BHK</option>
+                <option>2BHK</option>
+                <option>3BHK+</option>
+                <option>Office</option>
+                <option>Shop-Gala</option>
+                <option>P.G</option>
+                <option>Bunglow-Rowhouse</option>
+                <option>Chawl</option>
+                <option>Land</option>
+            </select>
+        </div>
+        <div class="j">
+            <select class="j" required style="background:white">
+                <option>Virar E</option>
+                <option>Virar W</option>
+                <option>Nallasopara E</option>
+                <option>Nallasopara W</option>
+                <option>Vasai E</option>
+                <option>Vasai W</option>
+                <option>Naigao E</option>
+                <option>Naigao W</option>
+            </select>
+        </div>
+        <div class="k">90,000</div>
+        <div class="l">
+            <select class="l" required style="background:white">
+                <option selected disabled>select</option>
+                <option>Not.Int</option>
+                <option>Not.Rech</option>
+                <option>Ring-Busy</option>
+                <option>Call Back</option>
+                <option>Swi.Off</option>
+                <option>Deal-Done</option>
+                <option>Net.Issue</option>
+                <option>Invalid</option>
+                <option>Beep Sound</option>
+            </select>
+        </div>
+        <div class="m"><input type="date" class="m"   required style="background:white"></div>
+        <div class="n">
+            <select class="n" required style="background:white">
+                <option selected disabled>select</option>
+                <option>8am</option>
+                <option>9am</option>
+                <option>10am</option>
+                <option>11am</option>
+                <option>12am</option>
+                <option>1pm</option>
+                <option>2pm</option>
+                <option>3pm</option>
+                <option>4pm</option>
+                <option>5pm</option>
+                <option>6pm</option>
+                <option>7pm</option>
+                <option>8pm</option>
+                <option>9pm</option>
+            </select>
+        </div>
+        <div class="o">Note</div>
+        <div id="p" class="dropdown">
+            <button class="dropbtn" style="background:blue">Action</button>
+            <div class="dropdown-content">
+                <a href="#" style="background:limegreen">Save</a>
+                <a href="#" style="background:orangered">Delete</a>
+                <a href="#" style="background:skyblue">SMS</a>
+                <a href="#" style="background:lightseagreen">WP SMS</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="box_1" >
+        <div class="a">00009</div>
+        <div class="b">22/05/22</div>
+        <div class="c">Sachin Vishwakarma Naidu</div>
+        <div class="d">8888888888</div>
+        <div class="e">8888888888</div>
+        <div class="f">Nallasopara W</div>
+        <div class="g">pamp</div>
+        <div class="h">
+            <select class="h" style="background:lavender" required>
+                <option selected disabled>select</option>
+                <option>Sale</option>
+                <option>Rent</option>
+                <option>Heavy.DP</option>
+                <option>Bank Auction</option>
+            </select>
+        </div>
+        <div class="i">
+            <select class="i" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>1RK</option>
+                <option>1BHK</option>
+                <option>2BHK</option>
+                <option>3BHK+</option>
+                <option>Office</option>
+                <option>Shop-Gala</option>
+                <option>P.G</option>
+                <option>Bunglow-Rowhouse</option>
+                <option>Chawl</option>
+                <option>Land</option>
+            </select>
+        </div>
+        <div class="j">
+            <select class="j" required style="background:lavender">
+                <option>Virar E</option>
+                <option>Virar W</option>
+                <option>Nallasopara E</option>
+                <option>Nallasopara W</option>
+                <option>Vasai E</option>
+                <option>Vasai W</option>
+                <option>Naigao E</option>
+                <option>Naigao W</option>
+            </select>
+        </div>
+        <div class="k">90,000</div>
+        <div class="l">
+            <select class="l" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>Not.Int</option>
+                <option>Not.Rech</option>
+                <option>Ring-Busy</option>
+                <option>Call Back</option>
+                <option>Swi.Off</option>
+                <option>Deal-Done</option>
+                <option>Net.Issue</option>
+                <option>Invalid</option>
+                <option>Beep Sound</option>
+            </select>
+        </div>
+        <div class="m"><input type="date" class="m"   required style="background:lavender"></div>
+        <div class="n">
+            <select class="n" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>8am</option>
+                <option>9am</option>
+                <option>10am</option>
+                <option>11am</option>
+                <option>12am</option>
+                <option>1pm</option>
+                <option>2pm</option>
+                <option>3pm</option>
+                <option>4pm</option>
+                <option>5pm</option>
+                <option>6pm</option>
+                <option>7pm</option>
+                <option>8pm</option>
+                <option>9pm</option>
+            </select>
+        </div>
+        <div class="o">Note</div>
+        <div id="p" class="dropdown">
+            <button class="dropbtn">Action</button>
+            <div class="dropdown-content">
+                <a href="#" style="background:limegreen">Save</a>
+                <a href="#" style="background:orangered">Delete</a>
+                <a href="#" style="background:skyblue">SMS</a>
+                <a href="#" style="background:lightseagreen">WP SMS</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="box_1" style="background:white">
+        <div class="a">00010</div>
+        <div class="b">22/05/22</div>
+        <div class="c">Sachin Vishwakarma Naidu</div>
+        <div class="d">8888888888</div>
+        <div class="e">8888888888</div>
+        <div class="f">Nallasopara W</div>
+        <div class="g">pamp</div>
+        <div class="h">
+            <select class="h" style="background:white" required>
+                <option selected disabled>select</option>
+                <option>Sale</option>
+                <option>Rent</option>
+                <option>Heavy.DP</option>
+                <option>Bank Auction</option>
+            </select>
+        </div>
+        <div class="i">
+            <select class="i" required style="background:white">
+                <option selected disabled>select</option>
+                <option>1RK</option>
+                <option>1BHK</option>
+                <option>2BHK</option>
+                <option>3BHK+</option>
+                <option>Office</option>
+                <option>Shop-Gala</option>
+                <option>P.G</option>
+                <option>Bunglow-Rowhouse</option>
+                <option>Chawl</option>
+                <option>Land</option>
+            </select>
+        </div>
+        <div class="j">
+            <select class="j" required style="background:white">
+                <option>Virar E</option>
+                <option>Virar W</option>
+                <option>Nallasopara E</option>
+                <option>Nallasopara W</option>
+                <option>Vasai E</option>
+                <option>Vasai W</option>
+                <option>Naigao E</option>
+                <option>Naigao W</option>
+            </select>
+        </div>
+        <div class="k">90,000</div>
+        <div class="l">
+            <select class="l" required style="background:white">
+                <option selected disabled>select</option>
+                <option>Not.Int</option>
+                <option>Not.Rech</option>
+                <option>Ring-Busy</option>
+                <option>Call Back</option>
+                <option>Swi.Off</option>
+                <option>Deal-Done</option>
+                <option>Net.Issue</option>
+                <option>Invalid</option>
+                <option>Beep Sound</option>
+            </select>
+        </div>
+        <div class="m"><input type="date" class="m"   required style="background:white"></div>
+        <div class="n">
+            <select class="n" required style="background:white">
+                <option selected disabled>select</option>
+                <option>8am</option>
+                <option>9am</option>
+                <option>10am</option>
+                <option>11am</option>
+                <option>12am</option>
+                <option>1pm</option>
+                <option>2pm</option>
+                <option>3pm</option>
+                <option>4pm</option>
+                <option>5pm</option>
+                <option>6pm</option>
+                <option>7pm</option>
+                <option>8pm</option>
+                <option>9pm</option>
+            </select>
+        </div>
+        <div class="o">Note</div>
+        <div id="p" class="dropdown">
+            <button class="dropbtn" style="background:blue">Action</button>
+            <div class="dropdown-content">
+                <a href="#" style="background:limegreen">Save</a>
+                <a href="#" style="background:orangered">Delete</a>
+                <a href="#" style="background:skyblue">SMS</a>
+                <a href="#" style="background:lightseagreen">WP SMS</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="box_1" >
+        <div class="a">00011</div>
+        <div class="b">22/05/22</div>
+        <div class="c">Sachin Vishwakarma Naidu</div>
+        <div class="d">8888888888</div>
+        <div class="e">8888888888</div>
+        <div class="f">Nallasopara W</div>
+        <div class="g">pamp</div>
+        <div class="h">
+            <select class="h" style="background:lavender" required>
+                <option selected disabled>select</option>
+                <option>Sale</option>
+                <option>Rent</option>
+                <option>Heavy.DP</option>
+                <option>Bank Auction</option>
+            </select>
+        </div>
+        <div class="i">
+            <select class="i" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>1RK</option>
+                <option>1BHK</option>
+                <option>2BHK</option>
+                <option>3BHK+</option>
+                <option>Office</option>
+                <option>Shop-Gala</option>
+                <option>P.G</option>
+                <option>Bunglow-Rowhouse</option>
+                <option>Chawl</option>
+                <option>Land</option>
+            </select>
+        </div>
+        <div class="j">
+            <select class="j" required style="background:lavender">
+                <option>Virar E</option>
+                <option>Virar W</option>
+                <option>Nallasopara E</option>
+                <option>Nallasopara W</option>
+                <option>Vasai E</option>
+                <option>Vasai W</option>
+                <option>Naigao E</option>
+                <option>Naigao W</option>
+            </select>
+        </div>
+        <div class="k">90,000</div>
+        <div class="l">
+            <select class="l" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>Not.Int</option>
+                <option>Not.Rech</option>
+                <option>Ring-Busy</option>
+                <option>Call Back</option>
+                <option>Swi.Off</option>
+                <option>Deal-Done</option>
+                <option>Net.Issue</option>
+                <option>Invalid</option>
+                <option>Beep Sound</option>
+            </select>
+        </div>
+        <div class="m"><input type="date" class="m"   required style="background:lavender"></div>
+        <div class="n">
+            <select class="n" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>8am</option>
+                <option>9am</option>
+                <option>10am</option>
+                <option>11am</option>
+                <option>12am</option>
+                <option>1pm</option>
+                <option>2pm</option>
+                <option>3pm</option>
+                <option>4pm</option>
+                <option>5pm</option>
+                <option>6pm</option>
+                <option>7pm</option>
+                <option>8pm</option>
+                <option>9pm</option>
+            </select>
+        </div>
+        <div class="o">Note</div>
+        <div id="p" class="dropdown">
+            <button class="dropbtn">Action</button>
+            <div class="dropdown-content">
+                <a href="#" style="background:limegreen">Save</a>
+                <a href="#" style="background:orangered">Delete</a>
+                <a href="#" style="background:skyblue">SMS</a>
+                <a href="#" style="background:lightseagreen">WP SMS</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="box_1" style="background:white">
+        <div class="a">00012</div>
+        <div class="b">22/05/22</div>
+        <div class="c">Sachin Vishwakarma Naidu</div>
+        <div class="d">8888888888</div>
+        <div class="e">8888888888</div>
+        <div class="f">Nallasopara W</div>
+        <div class="g">pamp</div>
+        <div class="h">
+            <select class="h" style="background:white" required>
+                <option selected disabled>select</option>
+                <option>Sale</option>
+                <option>Rent</option>
+                <option>Heavy.DP</option>
+                <option>Bank Auction</option>
+            </select>
+        </div>
+        <div class="i">
+            <select class="i" required style="background:white">
+                <option selected disabled>select</option>
+                <option>1RK</option>
+                <option>1BHK</option>
+                <option>2BHK</option>
+                <option>3BHK+</option>
+                <option>Office</option>
+                <option>Shop-Gala</option>
+                <option>P.G</option>
+                <option>Bunglow-Rowhouse</option>
+                <option>Chawl</option>
+                <option>Land</option>
+            </select>
+        </div>
+        <div class="j">
+            <select class="j" required style="background:white">
+                <option>Virar E</option>
+                <option>Virar W</option>
+                <option>Nallasopara E</option>
+                <option>Nallasopara W</option>
+                <option>Vasai E</option>
+                <option>Vasai W</option>
+                <option>Naigao E</option>
+                <option>Naigao W</option>
+            </select>
+        </div>
+        <div class="k">90,000</div>
+        <div class="l">
+            <select class="l" required style="background:white">
+                <option selected disabled>select</option>
+                <option>Not.Int</option>
+                <option>Not.Rech</option>
+                <option>Ring-Busy</option>
+                <option>Call Back</option>
+                <option>Swi.Off</option>
+                <option>Deal-Done</option>
+                <option>Net.Issue</option>
+                <option>Invalid</option>
+                <option>Beep Sound</option>
+            </select>
+        </div>
+        <div class="m"><input type="date" class="m"   required style="background:white"></div>
+        <div class="n">
+            <select class="n" required style="background:white">
+                <option selected disabled>select</option>
+                <option>8am</option>
+                <option>9am</option>
+                <option>10am</option>
+                <option>11am</option>
+                <option>12am</option>
+                <option>1pm</option>
+                <option>2pm</option>
+                <option>3pm</option>
+                <option>4pm</option>
+                <option>5pm</option>
+                <option>6pm</option>
+                <option>7pm</option>
+                <option>8pm</option>
+                <option>9pm</option>
+            </select>
+        </div>
+        <div class="o">Note</div>
+        <div id="p" class="dropdown">
+            <button class="dropbtn" style="background:blue">Action</button>
+            <div class="dropdown-content">
+                <a href="#" style="background:limegreen">Save</a>
+                <a href="#" style="background:orangered">Delete</a>
+                <a href="#" style="background:skyblue">SMS</a>
+                <a href="#" style="background:lightseagreen">WP SMS</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="box_1" >
+        <div class="a">00013</div>
+        <div class="b">22/05/22</div>
+        <div class="c">Sachin Vishwakarma Naidu</div>
+        <div class="d">8888888888</div>
+        <div class="e">8888888888</div>
+        <div class="f">Nallasopara W</div>
+        <div class="g">pamp</div>
+        <div class="h">
+            <select class="h" style="background:lavender" required>
+                <option selected disabled>select</option>
+                <option>Sale</option>
+                <option>Rent</option>
+                <option>Heavy.DP</option>
+                <option>Bank Auction</option>
+            </select>
+        </div>
+        <div class="i">
+            <select class="i" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>1RK</option>
+                <option>1BHK</option>
+                <option>2BHK</option>
+                <option>3BHK+</option>
+                <option>Office</option>
+                <option>Shop-Gala</option>
+                <option>P.G</option>
+                <option>Bunglow-Rowhouse</option>
+                <option>Chawl</option>
+                <option>Land</option>
+            </select>
+        </div>
+        <div class="j">
+            <select class="j" required style="background:lavender">
+                <option>Virar E</option>
+                <option>Virar W</option>
+                <option>Nallasopara E</option>
+                <option>Nallasopara W</option>
+                <option>Vasai E</option>
+                <option>Vasai W</option>
+                <option>Naigao E</option>
+                <option>Naigao W</option>
+            </select>
+        </div>
+        <div class="k">90,000</div>
+        <div class="l">
+            <select class="l" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>Not.Int</option>
+                <option>Not.Rech</option>
+                <option>Ring-Busy</option>
+                <option>Call Back</option>
+                <option>Swi.Off</option>
+                <option>Deal-Done</option>
+                <option>Net.Issue</option>
+                <option>Invalid</option>
+                <option>Beep Sound</option>
+            </select>
+        </div>
+        <div class="m"><input type="date" class="m"   required style="background:lavender"></div>
+        <div class="n">
+            <select class="n" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>8am</option>
+                <option>9am</option>
+                <option>10am</option>
+                <option>11am</option>
+                <option>12am</option>
+                <option>1pm</option>
+                <option>2pm</option>
+                <option>3pm</option>
+                <option>4pm</option>
+                <option>5pm</option>
+                <option>6pm</option>
+                <option>7pm</option>
+                <option>8pm</option>
+                <option>9pm</option>
+            </select>
+        </div>
+        <div class="o">Note</div>
+        <div id="p" class="dropdown">
+            <button class="dropbtn">Action</button>
+            <div class="dropdown-content">
+                <a href="#" style="background:limegreen">Save</a>
+                <a href="#" style="background:orangered">Delete</a>
+                <a href="#" style="background:skyblue">SMS</a>
+                <a href="#" style="background:lightseagreen">WP SMS</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="box_1" style="background:white">
+        <div class="a">00014</div>
+        <div class="b">22/05/22</div>
+        <div class="c">Sachin Vishwakarma Naidu</div>
+        <div class="d">8888888888</div>
+        <div class="e">8888888888</div>
+        <div class="f">Nallasopara W</div>
+        <div class="g">pamp</div>
+        <div class="h">
+            <select class="h" style="background:white" required>
+                <option selected disabled>select</option>
+                <option>Sale</option>
+                <option>Rent</option>
+                <option>Heavy.DP</option>
+                <option>Bank Auction</option>
+            </select>
+        </div>
+        <div class="i">
+            <select class="i" required style="background:white">
+                <option selected disabled>select</option>
+                <option>1RK</option>
+                <option>1BHK</option>
+                <option>2BHK</option>
+                <option>3BHK+</option>
+                <option>Office</option>
+                <option>Shop-Gala</option>
+                <option>P.G</option>
+                <option>Bunglow-Rowhouse</option>
+                <option>Chawl</option>
+                <option>Land</option>
+            </select>
+        </div>
+        <div class="j">
+            <select class="j" required style="background:white">
+                <option>Virar E</option>
+                <option>Virar W</option>
+                <option>Nallasopara E</option>
+                <option>Nallasopara W</option>
+                <option>Vasai E</option>
+                <option>Vasai W</option>
+                <option>Naigao E</option>
+                <option>Naigao W</option>
+            </select>
+        </div>
+        <div class="k">90,000</div>
+        <div class="l">
+            <select class="l" required style="background:white">
+                <option selected disabled>select</option>
+                <option>Not.Int</option>
+                <option>Not.Rech</option>
+                <option>Ring-Busy</option>
+                <option>Call Back</option>
+                <option>Swi.Off</option>
+                <option>Deal-Done</option>
+                <option>Net.Issue</option>
+                <option>Invalid</option>
+                <option>Beep Sound</option>
+            </select>
+        </div>
+        <div class="m"><input type="date" class="m"   required style="background:white"></div>
+        <div class="n">
+            <select class="n" required style="background:white">
+                <option selected disabled>select</option>
+                <option>8am</option>
+                <option>9am</option>
+                <option>10am</option>
+                <option>11am</option>
+                <option>12am</option>
+                <option>1pm</option>
+                <option>2pm</option>
+                <option>3pm</option>
+                <option>4pm</option>
+                <option>5pm</option>
+                <option>6pm</option>
+                <option>7pm</option>
+                <option>8pm</option>
+                <option>9pm</option>
+            </select>
+        </div>
+        <div class="o">Note</div>
+        <div id="p" class="dropdown">
+            <button class="dropbtn" style="background:blue">Action</button>
+            <div class="dropdown-content">
+                <a href="#" style="background:limegreen">Save</a>
+                <a href="#" style="background:orangered">Delete</a>
+                <a href="#" style="background:skyblue">SMS</a>
+                <a href="#" style="background:lightseagreen">WP SMS</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="box_1" >
+        <div class="a">00015</div>
+        <div class="b">22/05/22</div>
+        <div class="c">Sachin Vishwakarma Naidu</div>
+        <div class="d">8888888888</div>
+        <div class="e">8888888888</div>
+        <div class="f">Nallasopara W</div>
+        <div class="g">pamp</div>
+        <div class="h">
+            <select class="h" style="background:lavender" required>
+                <option selected disabled>select</option>
+                <option>Sale</option>
+                <option>Rent</option>
+                <option>Heavy.DP</option>
+                <option>Bank Auction</option>
+            </select>
+        </div>
+        <div class="i">
+            <select class="i" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>1RK</option>
+                <option>1BHK</option>
+                <option>2BHK</option>
+                <option>3BHK+</option>
+                <option>Office</option>
+                <option>Shop-Gala</option>
+                <option>P.G</option>
+                <option>Bunglow-Rowhouse</option>
+                <option>Chawl</option>
+                <option>Land</option>
+            </select>
+        </div>
+        <div class="j">
+            <select class="j" required style="background:lavender">
+                <option>Virar E</option>
+                <option>Virar W</option>
+                <option>Nallasopara E</option>
+                <option>Nallasopara W</option>
+                <option>Vasai E</option>
+                <option>Vasai W</option>
+                <option>Naigao E</option>
+                <option>Naigao W</option>
+            </select>
+        </div>
+        <div class="k">90,000</div>
+        <div class="l">
+            <select class="l" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>Not.Int</option>
+                <option>Not.Rech</option>
+                <option>Ring-Busy</option>
+                <option>Call Back</option>
+                <option>Swi.Off</option>
+                <option>Deal-Done</option>
+                <option>Net.Issue</option>
+                <option>Invalid</option>
+                <option>Beep Sound</option>
+            </select>
+        </div>
+        <div class="m"><input type="date" class="m"   required style="background:lavender"></div>
+        <div class="n">
+            <select class="n" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>8am</option>
+                <option>9am</option>
+                <option>10am</option>
+                <option>11am</option>
+                <option>12am</option>
+                <option>1pm</option>
+                <option>2pm</option>
+                <option>3pm</option>
+                <option>4pm</option>
+                <option>5pm</option>
+                <option>6pm</option>
+                <option>7pm</option>
+                <option>8pm</option>
+                <option>9pm</option>
+            </select>
+        </div>
+        <div class="o">Note</div>
+        <div id="p" class="dropdown">
+            <button class="dropbtn">Action</button>
+            <div class="dropdown-content">
+                <a href="#" style="background:limegreen">Save</a>
+                <a href="#" style="background:orangered">Delete</a>
+                <a href="#" style="background:skyblue">SMS</a>
+                <a href="#" style="background:lightseagreen">WP SMS</a>
+            </div>
+        </div>
+    </div>
+    <div class="box_1" style="background:white">
+        <div class="a">00016</div>
+        <div class="b">22/05/22</div>
+        <div class="c">Sachin Vishwakarma Naidu</div>
+        <div class="d">8888888888</div>
+        <div class="e">8888888888</div>
+        <div class="f">Nallasopara W</div>
+        <div class="g">pamp</div>
+        <div class="h">
+            <select class="h" style="background:white" required>
+                <option selected disabled>select</option>
+                <option>Sale</option>
+                <option>Rent</option>
+                <option>Heavy.DP</option>
+                <option>Bank Auction</option>
+            </select>
+        </div>
+        <div class="i">
+            <select class="i" required style="background:white">
+                <option selected disabled>select</option>
+                <option>1RK</option>
+                <option>1BHK</option>
+                <option>2BHK</option>
+                <option>3BHK+</option>
+                <option>Office</option>
+                <option>Shop-Gala</option>
+                <option>P.G</option>
+                <option>Bunglow-Rowhouse</option>
+                <option>Chawl</option>
+                <option>Land</option>
+            </select>
+        </div>
+        <div class="j">
+            <select class="j" required style="background:white">
+                <option>Virar E</option>
+                <option>Virar W</option>
+                <option>Nallasopara E</option>
+                <option>Nallasopara W</option>
+                <option>Vasai E</option>
+                <option>Vasai W</option>
+                <option>Naigao E</option>
+                <option>Naigao W</option>
+            </select>
+        </div>
+        <div class="k">90,000</div>
+        <div class="l">
+            <select class="l" required style="background:white">
+                <option selected disabled>select</option>
+                <option>Not.Int</option>
+                <option>Not.Rech</option>
+                <option>Ring-Busy</option>
+                <option>Call Back</option>
+                <option>Swi.Off</option>
+                <option>Deal-Done</option>
+                <option>Net.Issue</option>
+                <option>Invalid</option>
+                <option>Beep Sound</option>
+            </select>
+        </div>
+        <div class="m"><input type="date" class="m"   required style="background:white"></div>
+        <div class="n">
+            <select class="n" required style="background:white">
+                <option selected disabled>select</option>
+                <option>8am</option>
+                <option>9am</option>
+                <option>10am</option>
+                <option>11am</option>
+                <option>12am</option>
+                <option>1pm</option>
+                <option>2pm</option>
+                <option>3pm</option>
+                <option>4pm</option>
+                <option>5pm</option>
+                <option>6pm</option>
+                <option>7pm</option>
+                <option>8pm</option>
+                <option>9pm</option>
+            </select>
+        </div>
+        <div class="o">Note</div>
+        <div id="p" class="dropdown">
+            <button class="dropbtn" style="background:blue">Action</button>
+            <div class="dropdown-content">
+                <a href="#" style="background:limegreen">Save</a>
+                <a href="#" style="background:orangered">Delete</a>
+                <a href="#" style="background:skyblue">SMS</a>
+                <a href="#" style="background:lightseagreen">WP SMS</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="box_1" >
+        <div class="a">00017</div>
+        <div class="b">22/05/22</div>
+        <div class="c">Sachin Vishwakarma Naidu</div>
+        <div class="d">8888888888</div>
+        <div class="e">8888888888</div>
+        <div class="f">Nallasopara W</div>
+        <div class="g">pamp</div>
+        <div class="h">
+            <select class="h" style="background:lavender" required>
+                <option selected disabled>select</option>
+                <option>Sale</option>
+                <option>Rent</option>
+                <option>Heavy.DP</option>
+                <option>Bank Auction</option>
+            </select>
+        </div>
+        <div class="i">
+            <select class="i" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>1RK</option>
+                <option>1BHK</option>
+                <option>2BHK</option>
+                <option>3BHK+</option>
+                <option>Office</option>
+                <option>Shop-Gala</option>
+                <option>P.G</option>
+                <option>Bunglow-Rowhouse</option>
+                <option>Chawl</option>
+                <option>Land</option>
+            </select>
+        </div>
+        <div class="j">
+            <select class="j" required style="background:lavender">
+                <option>Virar E</option>
+                <option>Virar W</option>
+                <option>Nallasopara E</option>
+                <option>Nallasopara W</option>
+                <option>Vasai E</option>
+                <option>Vasai W</option>
+                <option>Naigao E</option>
+                <option>Naigao W</option>
+            </select>
+        </div>
+        <div class="k">90,000</div>
+        <div class="l">
+            <select class="l" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>Not.Int</option>
+                <option>Not.Rech</option>
+                <option>Ring-Busy</option>
+                <option>Call Back</option>
+                <option>Swi.Off</option>
+                <option>Deal-Done</option>
+                <option>Net.Issue</option>
+                <option>Invalid</option>
+                <option>Beep Sound</option>
+            </select>
+        </div>
+        <div class="m"><input type="date" class="m"   required style="background:lavender"></div>
+        <div class="n">
+            <select class="n" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>8am</option>
+                <option>9am</option>
+                <option>10am</option>
+                <option>11am</option>
+                <option>12am</option>
+                <option>1pm</option>
+                <option>2pm</option>
+                <option>3pm</option>
+                <option>4pm</option>
+                <option>5pm</option>
+                <option>6pm</option>
+                <option>7pm</option>
+                <option>8pm</option>
+                <option>9pm</option>
+            </select>
+        </div>
+        <div class="o">Note</div>
+        <div id="p" class="dropdown">
+            <button class="dropbtn">Action</button>
+            <div class="dropdown-content">
+                <a href="#" style="background:limegreen">Save</a>
+                <a href="#" style="background:orangered">Delete</a>
+                <a href="#" style="background:skyblue">SMS</a>
+                <a href="#" style="background:lightseagreen">WP SMS</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="box_1" style="background:white">
+        <div class="a">00018</div>
+        <div class="b">22/05/22</div>
+        <div class="c">Sachin Vishwakarma Naidu</div>
+        <div class="d">8888888888</div>
+        <div class="e">8888888888</div>
+        <div class="f">Nallasopara W</div>
+        <div class="g">pamp</div>
+        <div class="h">
+            <select class="h" style="background:white" required>
+                <option selected disabled>select</option>
+                <option>Sale</option>
+                <option>Rent</option>
+                <option>Heavy.DP</option>
+                <option>Bank Auction</option>
+            </select>
+        </div>
+        <div class="i">
+            <select class="i" required style="background:white">
+                <option selected disabled>select</option>
+                <option>1RK</option>
+                <option>1BHK</option>
+                <option>2BHK</option>
+                <option>3BHK+</option>
+                <option>Office</option>
+                <option>Shop-Gala</option>
+                <option>P.G</option>
+                <option>Bunglow-Rowhouse</option>
+                <option>Chawl</option>
+                <option>Land</option>
+            </select>
+        </div>
+        <div class="j">
+            <select class="j" required style="background:white">
+                <option>Virar E</option>
+                <option>Virar W</option>
+                <option>Nallasopara E</option>
+                <option>Nallasopara W</option>
+                <option>Vasai E</option>
+                <option>Vasai W</option>
+                <option>Naigao E</option>
+                <option>Naigao W</option>
+            </select>
+        </div>
+        <div class="k">90,000</div>
+        <div class="l">
+            <select class="l" required style="background:white">
+                <option selected disabled>select</option>
+                <option>Not.Int</option>
+                <option>Not.Rech</option>
+                <option>Ring-Busy</option>
+                <option>Call Back</option>
+                <option>Swi.Off</option>
+                <option>Deal-Done</option>
+                <option>Net.Issue</option>
+                <option>Invalid</option>
+                <option>Beep Sound</option>
+            </select>
+        </div>
+        <div class="m"><input type="date" class="m"   required style="background:white"></div>
+        <div class="n">
+            <select class="n" required style="background:white">
+                <option selected disabled>select</option>
+                <option>8am</option>
+                <option>9am</option>
+                <option>10am</option>
+                <option>11am</option>
+                <option>12am</option>
+                <option>1pm</option>
+                <option>2pm</option>
+                <option>3pm</option>
+                <option>4pm</option>
+                <option>5pm</option>
+                <option>6pm</option>
+                <option>7pm</option>
+                <option>8pm</option>
+                <option>9pm</option>
+            </select>
+        </div>
+        <div class="o">Note</div>
+        <div id="p" class="dropdown">
+            <button class="dropbtn" style="background:blue">Action</button>
+            <div class="dropdown-content">
+                <a href="#" style="background:limegreen">Save</a>
+                <a href="#" style="background:orangered">Delete</a>
+                <a href="#" style="background:skyblue">SMS</a>
+                <a href="#" style="background:lightseagreen">WP SMS</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="box_1" >
+        <div class="a">00019</div>
+        <div class="b">22/05/22</div>
+        <div class="c">Sachin Vishwakarma Naidu</div>
+        <div class="d">8888888888</div>
+        <div class="e">8888888888</div>
+        <div class="f">Nallasopara W</div>
+        <div class="g">pamp</div>
+        <div class="h">
+            <select class="h" style="background:lavender" required>
+                <option selected disabled>select</option>
+                <option>Sale</option>
+                <option>Rent</option>
+                <option>Heavy.DP</option>
+                <option>Bank Auction</option>
+            </select>
+        </div>
+        <div class="i">
+            <select class="i" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>1RK</option>
+                <option>1BHK</option>
+                <option>2BHK</option>
+                <option>3BHK+</option>
+                <option>Office</option>
+                <option>Shop-Gala</option>
+                <option>P.G</option>
+                <option>Bunglow-Rowhouse</option>
+                <option>Chawl</option>
+                <option>Land</option>
+            </select>
+        </div>
+        <div class="j">
+            <select class="j" required style="background:lavender">
+                <option>Virar E</option>
+                <option>Virar W</option>
+                <option>Nallasopara E</option>
+                <option>Nallasopara W</option>
+                <option>Vasai E</option>
+                <option>Vasai W</option>
+                <option>Naigao E</option>
+                <option>Naigao W</option>
+            </select>
+        </div>
+        <div class="k">90,000</div>
+        <div class="l">
+            <select class="l" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>Not.Int</option>
+                <option>Not.Rech</option>
+                <option>Ring-Busy</option>
+                <option>Call Back</option>
+                <option>Swi.Off</option>
+                <option>Deal-Done</option>
+                <option>Net.Issue</option>
+                <option>Invalid</option>
+                <option>Beep Sound</option>
+            </select>
+        </div>
+        <div class="m"><input type="date" class="m"   required style="background:lavender"></div>
+        <div class="n">
+            <select class="n" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>8am</option>
+                <option>9am</option>
+                <option>10am</option>
+                <option>11am</option>
+                <option>12am</option>
+                <option>1pm</option>
+                <option>2pm</option>
+                <option>3pm</option>
+                <option>4pm</option>
+                <option>5pm</option>
+                <option>6pm</option>
+                <option>7pm</option>
+                <option>8pm</option>
+                <option>9pm</option>
+            </select>
+        </div>
+        <div class="o">Note</div>
+        <div id="p" class="dropdown">
+            <button class="dropbtn">Action</button>
+            <div class="dropdown-content">
+                <a href="#" style="background:limegreen">Save</a>
+                <a href="#" style="background:orangered">Delete</a>
+                <a href="#" style="background:skyblue">SMS</a>
+                <a href="#" style="background:lightseagreen">WP SMS</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+var modal = document.getElementById('id01');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Office_layout</title>
+    <link rel="stylesheet" href="{% static 'css/office_layout.css' %}" />
+
+<style>
+.nav{
+    border:1px solid red;
+    height:120px;
+    width:100%;
+}
+</style>
+</head>
+<body>
+<div class="main_nav" id="myMain_nav">
+    <a href="{% url 'office_index' %}" class="logo">A<span style="color:navy">gent</span>N<span style="font-size:38px;color:navy">&#8709;</span></a>
+    <a href="{% url 'office_logout' %}" class="logout">LOGOUT</a>
+    <label class="uname">{{request.session.username}}</label>
+    <div class="nav-drp" id="active" >
+        <button  class="nav-btn">VIEW ALL DATABASE<i class="fa-solid fa-house"></i>
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="nav-content0">
+             <a href="{% url 'office_rentdb' %}">USER RENT DATABASE</a>
+             <a href="{% url 'office_saleblock' %}">USER SALE BLOCK DB</a>
+             <a href="{% url 'office_rentblock' %}">USER RENT BLOCK DB</a>
+        </div>
+    </div>
+
+
+</div>
+<div class="nav" >
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% block body %}
+{% endblock %}
+
+</body>
+</html>

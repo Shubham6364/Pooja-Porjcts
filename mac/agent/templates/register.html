@@ -1,0 +1,199 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block body %}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+
+<link rel="stylesheet" href="{% static 'css/register.css' %}" />
+<style>
+.container{
+    width:60%;
+    height:750px;
+    margin-top:30px;
+    margin-left:20%;
+}
+.form{
+     width:100%;
+     height:100%;
+     margin:5px;
+     padding-left:50px;
+     padding-right:50px;
+     padding-top:20px;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+h1{
+    text-align:center;
+    color:crimson;
+}
+.filling{
+    height:210px;
+    margin-top:30px;
+}
+.text{
+    color:darkslategray;
+    margin-top:10px;
+}
+.fname{
+    width:45%;
+    height:30%;
+    float:left;
+    margin-bottom:20px;
+    text-transform:capitalize;
+}
+.lname{
+    width:45%;
+    height:30%;
+    float:left;
+    margin-left:60px;
+    margin-bottom:40px;
+    text-transform:capitalize;
+}
+input[type=text],input[type=password],input[type=number]{
+  width:100%;
+  padding: 8px 20px;
+  margin :0px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+#email{
+  width:100%;
+  padding: 8px 8px;
+  margin: 0px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.cancel_btn{
+    width:250px;
+    margin-top:60px;
+    margin-right:40px;
+    background:red;
+    padding:10px;
+    font-size:18px;
+    font-weight:bold;
+    color:white;
+    border:1px solid red;
+    float:right;
+}
+.cancel_btn:hover{
+    background:orangered;
+}
+.submit_btn{
+    width:250px;
+    margin-top:60px;
+    background:green;
+    padding:10px;
+    margin-right:20px;
+    font-size:18px;
+    font-weight:bold;
+    color:white;
+    border:1px solid green;
+    float:right;
+}
+.submit_btn:hover{
+    background:limegreen;
+}
+.remember{
+    width:100%;
+    padding:20px;
+    text-align:center;
+    margin-left:50px;
+}
+input[checked=checked]{
+    float:left;
+    margin-left:200px;
+    margin-top:20px;
+}
+.terms{
+    color:dodgerblue;
+    font-size:14px;
+    margin-left:5px;
+    padding:0px;
+    width:120px;
+    margin-top:20px;
+}
+.formerror{
+    color:red;
+    font-size:14px;
+}
+.field-icon {
+  float: right;
+  margin-top:-30px;
+  margin-right:10px;
+  position:relative;
+  z-index: 1;
+}
+</style>
+
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<div class="container">
+    <form class="form" action="register" method="POST">
+        {% csrf_token %}
+        <h1>Sign Up</h1>
+        <br>
+        <hr>
+        <div class="filling">
+            <div class="fname">
+                <label class="text" for="fname" ><b>First Name</b></label> <b><span class="text-coral" style="font-size:18px;">*</span></b>
+                <input id="fname" type="text" class="name2"  minlength="5" maxlength="15"  placeholder="Enter First Name" name="fname" style="text-transform:capitalize;"  required>
+            </div>
+            <div class="lname">
+                <label class="text" for="lname"><b>Last Name</b></label> <b><span class="text-coral" style="font-size:18px;">*</span></b>
+                <input id="lname" type="text"  class="name2" minlength="5" maxlength="15" placeholder="Enter Last Name" name="lname" style="text-transform:capitalize;"  required>
+            </div>
+            <br>
+            <div class="fname">
+                <label class="text" for="fname" ><b>Username</b></label> <b><span class="text-coral" style="font-size:18px;">*</span></b>
+                <input id="username" type="text"  minlength="8" maxlength="12" placeholder="Create Your Username" name="uname"  required>
+            </div>
+            <div class="lname">
+                <label class="text" for="lname"><b>Email (Optional)</b></label>
+                <input id="email" type="email"  minlength="10" maxlength="50" placeholder="Enter Your Email (Optional)" name="email" >
+            </div>
+            <br>
+            <div class="fname">
+                <label class="text" for="first_number" ><b>Mobile Number</b></label> <b><span class="text-coral" style="font-size:18px;">*</span></b>
+                <input id="first_number" type="number" class="name2"  minlength="10" maxlength="10"  placeholder="Enter First Name" name="number1"  required>
+            </div>
+            <div class="lname">
+                <label class="text" for="alter_number"><b>Alternate Mobile Number (Optional)</b></label>
+                <input id="alter_number" type="number"  class="name2" minlength="10" maxlength="10" placeholder=" Enter Alternate Number (Optional)" name="number2" >
+            </div>
+            <br>
+             <br>
+            <div class="fname">
+                <label class="text" for="pin" ><b>Create Pin</b></label> <b><span class="text-coral" style="font-size:18px;">*</span></b>
+                <input id="pin" type="password" class="name2"  minlength="4" maxlength="4" placeholder="Enter 4 Digit Pin" name="pin" required><span toggle ="#pin" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+            </div>
+            <div class="lname">
+                <label class="text" for="cpin"><b>Confirm Pin</b></label> <b><span class="text-coral" style="font-size:18px;">*</span></b>
+                <input id="cpin" type="password"  minlength="4" maxlength="4" placeholder="Enter Confirm Pin" name="cpin" required><span toggle ="#cpin" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+            </div>
+            <br>
+              <div class="remember">
+                <input  type="checkbox" checked="checked" name="remember" required>
+                <a href="#" class="terms">Terms & Privacy</a>
+              </div>
+                <button type="submit" id="submit" onclick="return Validate()" class="submit_btn">Submit</button>
+                <button type="reset" class="cancel_btn">Cancel</button>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+
+<script src="{% static 'js/register.js' %}"></script>
+
+{% endblock %}
